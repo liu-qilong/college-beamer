@@ -10,5 +10,4 @@ build/
 *.toc
 *.synctex.gz
 *.toc.vrb
-*.cls
 *.vrb
