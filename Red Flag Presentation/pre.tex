@@ -4,21 +4,6 @@
 \usepackage{amsfonts, amsmath, oldgerm, lmodern, graphicx}
 \usepackage{xeCJK}
 \usefonttheme{serif}
-\newcommand{\hrefcol}[2]{\textcolor{airforceblue}{\href{#1}{#2}}}
-\AtBeginSection[]
-{
-    \begingroup
-    \setbeamertemplate{footline}{}
-    \themecolor{blue}
-    \begin{frame}
-        \frametitle{Table of Contents}
-        \tableofcontents[currentsection]
-    \end{frame}
-    \endgroup
-}
-\makeatletter
-    \pretocmd\beamer@checkframetitle{\framesubtitle{\thesection \, \secname}}
-\makeatother
 
 % meta-data
 \title{红旗 Beamer 主题}
