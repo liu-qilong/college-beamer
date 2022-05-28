@@ -11,3 +11,4 @@ build/
 *.synctex.gz
 *.toc.vrb
 *.vrb
+*.pdf
