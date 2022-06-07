@@ -44,7 +44,7 @@ Would like to make your own theme on top of these themes? It's quite easy, only 
 
 ### Step 1: Get the files
   
-To get the files, you can fork & clone the repository to your disk.
+To get the files, you can fork & clone the repository to your computer.
 
 Alternatively, you can open the templates' Overleaf webpages and click `Open as Template`.
   
@@ -52,7 +52,7 @@ Alternatively, you can open the templates' Overleaf webpages and click `Open as 
   
 The `images/` folder stores the icon pictures. The `SINTEF_Logo_Sentrert_RGB.jpg` is the icon picture shown on the title page & normal pages. And the `SINTEF_Logo_Sentrert_Negativ_RGB.jpg` is the icon picture shown on the contents pages & end page, both on the left-top corner.
 
-You can replace them with your own icons, noted that the pictures' file names should be the same, otherwise the theme doesn't know how to find your icons.
+You can replace them with your own icons, noted that the pictures' file names should be the same as the original ones, otherwise the theme doesn't know how to find your icons.
 
 For those who open the template on Overleaf, please click the `Upload` button on the top-left corner to upload your icon pictures, and replace the original icon files in the `images/` folder.
   
