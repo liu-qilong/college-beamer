@@ -55,8 +55,12 @@ The `images/` folder stores the icon pictures. The `SINTEF_Logo_Sentrert_RGB.jpg
 You can replace them with your own icons, noted that the pictures' file names should be the same as the original ones, otherwise the theme doesn't know how to find your icons.
 
 For those who open the template on Overleaf, please click the `Upload` button on the top-left corner to upload your icon pictures, and replace the original icon files in the `images/` folder.
+
+### Step 3: Replace background picture
   
-### Step 3: Change the main colour
+The `images/` folder also stores the background picture, which is `background.png`. You can fell free to replace it in the same way as Step 2.
+  
+### Step 4: Change the main colour
 
 To optimize the visual appearance, it's recommended to change the main colour, which will be used as the colour of titles and backgrounds. The 7-th line of `sintefcolor.sty` file defines the main colour:
 ```
