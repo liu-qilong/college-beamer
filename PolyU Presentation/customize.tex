@@ -1,0 +1,57 @@
+% TYPESETTING ELEMENTS
+
+% style of section presented in the table of contents
+\setbeamertemplate{section in toc}{$\blacktriangleright$~\inserttocsection}
+
+% style of subsection presented in the table of contents
+\setbeamertemplate{subsection in toc}{}
+% \setbeamertemplate{subsection in toc}{\footnotesize\hspace{1.2 em}$\blacktriangleright$~\inserttocsubsection}
+
+% automate subtitle of each frame
+\makeatletter
+    \pretocmd\beamer@checkframetitle{\framesubtitle{\thesection \, \secname}}
+\makeatother
+
+% avoid numbering of frames that are breaked into multiply slides
+\setbeamertemplate{frametitle continuation}{}
+
+% at the begining of section, add table of contents with the current section highlighted
+\AtBeginSection[]
+{
+    \begingroup
+    \setbeamertemplate{footline}{}
+    \themecolor{blue}
+    \begin{frame}{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+    \endgroup
+}
+
+% at the begining of subsection, add subsection title page
+\AtBeginSubsection[]
+{
+    \begin{frame}{\thesection.\thesubsection 节}
+            \LARGE\centering\textbf{\subsecname}
+    \end{frame}
+}
+
+% NEW COMANDS
+
+% set colored hyperlinks command
+\newcommand{\hrefcol}[2]{\textcolor{airforceblue}{\href{#1}{#2}}}
+
+% centering paragraph statement
+\newcommand{\centerstate}[1]{
+    \centering
+    \begin{columns}
+        \begin{column}{0.8\textwidth}
+            #1
+        \end{column}
+    \end{columns}
+}
+
+% colored textbf
+\newcommand{\cbf}[1]{\textbf{\textcolor{sintefblue}{#1}}}
+
+% colored emph
+\newcommand{\cemph}[1]{\textbf{\textcolor{sintefblue}{#1}}}
