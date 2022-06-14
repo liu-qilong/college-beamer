@@ -81,12 +81,12 @@ preamble:
 \begin{frame}[fragile]{Title page}
 To set a typical title page, you call some commands in the preamble:
 \begin{block}{The Commands for the Title Page}
-\begin{verbatim}
+\begin{lstlisting}[language=TeX]
 \title{Sample Title}
 \subtitle{Sample subtitle}
 \author{First Author, Second Author}
 \date{Defaults to today's}
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 You can then write out the title page with \verb|\maketitle|.
 
@@ -105,7 +105,7 @@ for SINTEF presentation title pages.
 \item These can be uncovered in sequence
 \end{itemize}
 \begin{block}{Code for a Page with an Itemised List}<+->
-\begin{verbatim}
+\begin{lstlisting}[language=TeX]
 \begin{frame}
   \frametitle{Writing a Simple Slide}
   \framesubtitle{It's really easy!}
@@ -113,7 +113,7 @@ for SINTEF presentation title pages.
     \item A typical slide has bulleted lists
     \item These can be uncovered in sequence
   \end{itemize}
-\end{frame}\end{verbatim}
+\end{frame}\end{lstlisting}
 \end{block}
 \end{frame}
 
@@ -122,12 +122,12 @@ for SINTEF presentation title pages.
 \begin{column}{0.7\textwidth}
 Adding images works like in normal \LaTeX:
 \begin{block}{Code for Adding Images}
-\begin{verbatim}
+\begin{lstlisting}[language=TeX]
 \usepackage{graphicx}
 % ...
 \includegraphics
 [width=\textwidth]{images/default}
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 \end{column}
 \begin{column}{0.3\textwidth}
@@ -149,7 +149,7 @@ And this the second
 \end{column}
 \end{columns}
 \begin{block}{Column Code}
-\begin{verbatim}
+\begin{lstlisting}[language=TeX]
 \begin{columns}
     \begin{column}{0.6\textwidth}
         This is the first column
@@ -159,7 +159,7 @@ And this the second
     \end{column}
     % There could be more!
 \end{columns}
-\end{verbatim}
+\end{lstlisting}
 \end{block}
 \end{frame}
 
