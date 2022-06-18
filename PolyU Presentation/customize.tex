@@ -15,13 +15,12 @@
 % avoid numbering of frames that are breaked into multiply slides
 \setbeamertemplate{frametitle continuation}{}
 
-% at the begining of section, add table of contents with the current section highlighted
 \AtBeginSection[]
 {
     \begingroup
     \setbeamertemplate{footline}{}
     \themecolor{blue}
-    \begin{frame}{Table of Contents}
+    \begin{frame}{\strtoc}
         \tableofcontents[currentsection]
     \end{frame}
     \endgroup
@@ -30,8 +29,12 @@
 % at the begining of subsection, add subsection title page
 \AtBeginSubsection[]
 {
-    \begin{frame}{\thesection.\thesubsection 节}
-            \LARGE\centering\textbf{\subsecname}
+    \begin{frame}{\,}{\thesection \, \secname}
+        \centering\textsl{\textbf{\textcolor{sintefblue}{
+            \large \strsubsec
+            \vskip15pt
+            \LARGE \subsecname
+        }}}
     \end{frame}
 }
 
@@ -80,7 +83,10 @@
 }
 
 % colored textbf
-\newcommand{\cbf}[1]{\textbf{\textcolor{sintefblue}{#1}}}
+\newcommand{\ctextbf}[1]{\textbf{\textcolor{sintefblue}{#1}}}
+
+% colored textsl
+\newcommand{\ctextsl}[1]{\textsl{\textcolor{sintefblue}{#1}}}
 
 % colored emph
-\newcommand{\cemph}[1]{\textbf{\textcolor{sintefblue}{#1}}}
+\newcommand{\cemph}[1]{\emph{\textcolor{sintefblue}{#1}}}
