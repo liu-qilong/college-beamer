@@ -15,12 +15,13 @@
 % avoid numbering of frames that are breaked into multiply slides
 \setbeamertemplate{frametitle continuation}{}
 
+% at the begining of section, add table of contents with the current section highlighted
 \AtBeginSection[]
 {
     \begingroup
     \setbeamertemplate{footline}{}
     \themecolor{blue}
-    \begin{frame}{\strtoc}
+    \begin{frame}{Table of Contents}
         \tableofcontents[currentsection]
     \end{frame}
     \endgroup
@@ -30,8 +31,9 @@
 \AtBeginSubsection[]
 {
     \begin{frame}{\,}{\thesection \, \secname}
+        \fontfamily{ptm}\selectfont
         \centering\textsl{\textbf{\textcolor{sintefblue}{
-            \large \strsubsec
+            \large Section \thesection.\thesubsection
             \vskip15pt
             \LARGE \subsecname
         }}}
@@ -90,3 +92,11 @@
 
 % colored emph
 \newcommand{\cemph}[1]{\emph{\textcolor{sintefblue}{#1}}}
+
+% unnumbered footnote
+\newcommand\blfootnote[1]{%
+\begingroup
+\renewcommand\thefootnote{}\footnote{#1}%
+\addtocounter{footnote}{-1}%
+\endgroup
+}
