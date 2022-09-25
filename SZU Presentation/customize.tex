@@ -1,3 +1,7 @@
+% packages, font, color, and new commands
+\usepackage{amsfonts, amsmath, oldgerm, lmodern, animate}
+\usefonttheme{serif}
+
 % TYPESETTING ELEMENTS
 
 % style of section presented in the table of contents
@@ -27,7 +31,7 @@
     \endgroup
 }
 
-% at the begining of subsection, add subsection title page
+% at the beginning of subsection, add subsection title page
 \AtBeginSubsection[]
 {
     \begin{frame}{\,}{\thesection \, \secname}
@@ -69,7 +73,7 @@
 
 \lstset{style=mystyle}
 
-% NEW COMANDS
+% NEW COMMANDS
 
 % set colored hyperlinks command
 \newcommand{\hrefcol}[2]{\textcolor{airforceblue}{\href{#1}{#2}}}
@@ -92,11 +96,3 @@
 
 % colored emph
 \newcommand{\cemph}[1]{\emph{\textcolor{sintefblue}{#1}}}
-
-% unnumbered footnote
-\newcommand\blfootnote[1]{%
-\begingroup
-\renewcommand\thefootnote{}\footnote{#1}%
-\addtocounter{footnote}{-1}%
-\endgroup
-}
