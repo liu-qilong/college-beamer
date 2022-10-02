@@ -1,5 +1,7 @@
 % packages, font, color, and new commands
 \usepackage{amsfonts, amsmath, oldgerm, lmodern, animate}
+\usepackage{verbatim}
+\usepackage{bm}
 \usefonttheme{serif}
 
 % TYPESETTING ELEMENTS
@@ -77,6 +79,8 @@
 
 % set colored hyperlinks command
 \newcommand{\hrefcol}[2]{\textcolor{airforceblue}{\href{#1}{#2}}}
+\newcommand{\hlinkcol}[1]{\hrefcol{#1}{#1}}
+
 
 % centering paragraph statement
 \newcommand{\centerstate}[1]{
@@ -90,9 +94,39 @@
 
 % colored textbf
 \newcommand{\ctextbf}[1]{\textbf{\textcolor{sintefblue}{#1}}}
+\newcommand{\btextbf}[1]{\textbf{\textcolor{airforceblue}{#1}}}
 
 % colored textsl
 \newcommand{\ctextsl}[1]{\textsl{\textcolor{sintefblue}{#1}}}
+\newcommand{\btextsl}[1]{\textsl{\textcolor{airforceblue}{#1}}}
 
 % colored emph
 \newcommand{\cemph}[1]{\emph{\textcolor{sintefblue}{#1}}}
+\newcommand{\bemph}[1]{\emph{\textcolor{airforceblue}{#1}}}
+
+% about page
+\newcommand{\aboutpage}[2]{
+    \begingroup
+    \setbeamertemplate{footline}{}
+    \themecolor{blue}
+    \begin{frame}[c]{#1}{\,}
+        \centering
+        \begin{minipage}{\textwidth}
+            \usebeamercolor[fg]{normal text}
+            \centering
+            \Large \textsl{\normalsize #2}
+        \end{minipage}
+    \end{frame}
+    \endgroup
+}
+
+% bibliography page
+\newcommand{\bibliographpage}{
+    \begingroup
+    \themecolor{blue}
+    \begin{frame}[allowframebreaks]{References}{\,}
+        \tiny
+        \printbibliography[heading=none]
+    \end{frame}
+\endgroup
+}
