@@ -17,28 +17,28 @@ Below shows some examples:
 
 ## Title Pages for Schools/Organizations
 - The Hong Kong Polytechnic University
-![PolyU](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png)
+![PolyU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png)
 - Southwest University
-![SWU](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/SWU.png)
+![SWU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SWU.png)
 - Shenzhen University
-![SZU](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/SZU.png)
+![SZU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SZU.png)
 - Shenzhen Academic of Environmental Science
-![SAES](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/SAES.png)
+![SAES](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SAES.png)
 
 ## Page Elements
 
 - Table of Contents
 
   At the beginning of each section, the table of contents will be shown with the current chapter highlighted.
-![toc](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/table%20of%20contents.png)
+![toc](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/table%20of%20contents.png)
 - Sub-section page
-![ssec](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/subsection.png)
+![ssec](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/subsection.png)
 - Math equation
-![math](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/math.png)
+![math](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/math.png)
 - Code block
-![code](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/code.png)
+![code](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/code.png)
 - End page
-![end](https://github.com/Qilong-Kirov-LIU/Beamer-LaTeX-Themes/blob/main/gallery/end.png)
+![end](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/end.png)
 
 ## Make Your Own Theme?
 
