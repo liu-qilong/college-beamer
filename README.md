@@ -7,9 +7,11 @@ Here are some beamer templates which are secondary creations of [SINTEF Presenta
 All templates have been submitted to [Gallery - Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
 - [The Honk Kong Polytechnic University (PolyU) Beamer Presentation Theme - Overleaf](https://www.overleaf.com/latex/templates/the-honk-kong-polytechnic-university-polyu-beamer-presentation-theme/vywngqprjwrq)
-- [西南大学 SWU Beamer 模板主题 - Overleaf](https://www.overleaf.com/latex/templates/xi-nan-da-xue-swu-beamer-mo-ban-zhu-ti/bgprxfbyhqsb)
+- [西南大学 SWU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/xi-nan-da-xue-swu-beamer-mo-ban-zhu-ti/bgprxfbyhqsb)
 - [深圳大学 SZU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-da-xue-szu-beamer-mo-ban/bjwzmkpsgygf)
-- [深圳环境科学院 SAES Beamer 主题 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
+- [深圳环境科学院 SAES Beamer 模版 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
+- 哈尔滨工业大学 Beamer 模版
+  > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 
 > Noted that if you'd like to include Chinese text, please use XeLaTeX for typesetting.
 
@@ -24,6 +26,9 @@ Below shows some examples:
 ![SZU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SZU.png)
 - Shenzhen Academic of Environmental Science
 ![SAES](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SAES.png)
+- Harbin Institute of Technology
+![HIT](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/HIT.png)
+  > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 
 ## Page Elements
 
