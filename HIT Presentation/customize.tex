@@ -1,0 +1,134 @@
+% packages, font, color, and new commands
+\usepackage{amsfonts, amsmath, oldgerm, lmodern, animate}
+\usepackage{verbatim}
+\usepackage{bm}
+\usefonttheme{serif}
+
+% TYPESETTING ELEMENTS
+
+% style of section presented in the table of contents
+\setbeamertemplate{section in toc}{$\blacktriangleright$~\inserttocsection}
+
+% style of subsection presented in the table of contents
+\setbeamertemplate{subsection in toc}{}
+% \setbeamertemplate{subsection in toc}{\footnotesize\hspace{1.2 em}$\blacktriangleright$~\inserttocsubsection}
+
+% automate subtitle of each frame
+\makeatletter
+    \pretocmd\beamer@checkframetitle{\framesubtitle{\thesection \, \secname}}
+\makeatother
+
+% avoid numbering of frames that are breaked into multiply slides
+\setbeamertemplate{frametitle continuation}{}
+
+% at the begining of section, add table of contents with the current section highlighted
+\AtBeginSection[]
+{
+    \begingroup
+    \setbeamertemplate{footline}{}
+    \themecolor{blue}
+    \begin{frame}{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+    \endgroup
+}
+
+% at the beginning of subsection, add subsection title page
+\AtBeginSubsection[]
+{
+    \begin{frame}{\,}{\thesection \, \secname}
+        \fontfamily{ptm}\selectfont
+        \centering\textsl{\textbf{\textcolor{sintefblue}{
+            \large Section \thesection.\thesubsection
+            \vskip15pt
+            \LARGE \subsecname
+        }}}
+    \end{frame}
+}
+
+% code bolck setting
+\definecolor{codegreen}{RGB}{101,218,120}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    % backgroundcolor=\color{backcolour},
+    commentstyle=\color{airforceblue},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    xleftmargin=10pt,
+    xrightmargin=10pt,
+}
+
+\lstset{style=mystyle}
+
+% NEW COMMANDS
+
+% set colored hyperlinks command
+\newcommand{\hrefcol}[2]{\textcolor{airforceblue}{\href{#1}{#2}}}
+\newcommand{\hlinkcol}[1]{\hrefcol{#1}{#1}}
+
+
+% centering paragraph statement
+\newcommand{\centerstate}[1]{
+    \centering
+    \begin{columns}
+        \begin{column}{0.8\textwidth}
+            #1
+        \end{column}
+    \end{columns}
+}
+
+% colored textbf
+\newcommand{\ctextbf}[1]{\textbf{\textcolor{sintefblue}{#1}}}
+\newcommand{\btextbf}[1]{\textbf{\textcolor{airforceblue}{#1}}}
+
+% colored textsl
+\newcommand{\ctextsl}[1]{\textsl{\textcolor{sintefblue}{#1}}}
+\newcommand{\btextsl}[1]{\textsl{\textcolor{airforceblue}{#1}}}
+
+% colored emph
+\newcommand{\cemph}[1]{\emph{\textcolor{sintefblue}{#1}}}
+\newcommand{\bemph}[1]{\emph{\textcolor{airforceblue}{#1}}}
+
+% about page
+\newcommand{\aboutpage}[2]{
+    \begingroup
+    \setbeamertemplate{footline}{}
+    \themecolor{blue}
+    \begin{frame}[c]{#1}{\,}
+        \centering
+        \begin{minipage}{\textwidth}
+            \usebeamercolor[fg]{normal text}
+            \centering
+            \Large \textsl{\normalsize #2}
+        \end{minipage}
+    \end{frame}
+    \endgroup
+}
+
+% bibliography page
+\newcommand{\bibliographpage}{
+    \section{References}
+
+    \begingroup
+    \themecolor{blue}
+    \begin{frame}[allowframebreaks]{References}{\,}
+        \tiny
+        \printbibliography[heading=none]
+    \end{frame}
+\endgroup
+}
