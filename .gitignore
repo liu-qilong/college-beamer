@@ -16,3 +16,5 @@ build/
 *.run.xml
 *.blg
 *.pdf
+*.fdb_latexmk
+*.fls
