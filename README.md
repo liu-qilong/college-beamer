@@ -10,7 +10,7 @@ All templates have been submitted to [Gallery - Overleaf](https://cs.overleaf.co
 - [西南大学 SWU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/xi-nan-da-xue-swu-beamer-mo-ban-zhu-ti/bgprxfbyhqsb)
 - [深圳大学 SZU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-da-xue-szu-beamer-mo-ban/bjwzmkpsgygf)
 - [深圳环境科学院 SAES Beamer 模版 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
-- 哈尔滨工业大学 Beamer 模版
+- [哈尔滨工业大学 Beamer 模版](https://www.overleaf.com/latex/templates/harbin-institute-of-technology-hit-beamer-presentation-theme/prwxqwfdzkqj)
   > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 
 > Noted that if you'd like to include Chinese text, please use XeLaTeX for typesetting.
