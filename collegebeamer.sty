@@ -1,0 +1,337 @@
+\ProvidesPackage{collegeBeamer}
+
+% required packages
+\RequirePackage{etoolbox}
+\RequirePackage{tikz}
+\RequirePackage{listings}
+\RequirePackage{graphicx}
+\RequirePackage{geometry}
+\RequirePackage{amsfonts, amsmath, bm, oldgerm, lmodern}  % math
+\RequirePackage{verbatim}
+\RequirePackage{animate}
+\RequirePackage{xcolor}
+
+% --- package options ---
+% languages
+\newcommand{\tocStr}{Table of Contents}
+\newcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
+
+\DeclareOption{en}{
+    \renewcommand{\tocStr}{Table of Contents}
+    \renewcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
+}
+
+\DeclareOption{zh}{
+    % add to the preamble: \usepackage{xeCJK}
+    % compile with xeLaTeX
+    \renewcommand{\tocStr}{目录}
+    \renewcommand{\qaStr}{\textbf{感谢您的聆听和反馈}}
+}
+
+% colleges & institutes
+\newcommand{\maincolorRGB}{128, 57, 61}
+\newcommand{\colorlogoPath}{src/PolyU/color-logo.png}
+\newcommand{\translogoPath}{src/PolyU/trans-logo.png}
+\newcommand{\backgroundPath}{src/PolyU/background.png}
+
+\DeclareOption{polyu}{
+    \renewcommand{\maincolorRGB}{128, 57, 61}
+    \renewcommand{\colorlogoPath}{src/PolyU/color-logo.png}
+    \renewcommand{\translogoPath}{src/PolyU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/PolyU/background.png}
+}
+
+\DeclareOption{szu}{
+    \renewcommand{\maincolorRGB}{124, 36, 64}
+    \renewcommand{\colorlogoPath}{src/SZU/color-logo.png}
+    \renewcommand{\translogoPath}{src/SZU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/SZU/background.png}
+}
+
+\DeclareOption{swu}{
+    \renewcommand{\maincolorRGB}{39, 32, 99}
+    \renewcommand{\colorlogoPath}{src/SWU/color-logo.png}
+    \renewcommand{\translogoPath}{src/SWU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/SWU/background.png}
+}
+
+\DeclareOption{hit}{
+    \renewcommand{\maincolorRGB}{42, 101, 128}
+    \renewcommand{\colorlogoPath}{src/hit/color-logo.png}
+    \renewcommand{\translogoPath}{src/hit/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/hit/background.png}
+}
+
+\DeclareOption{saes}{
+    \renewcommand{\maincolorRGB}{5, 103, 81}
+    \renewcommand{\colorlogoPath}{src/SAES/color-logo.png}
+    \renewcommand{\translogoPath}{src/SAES/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/SAES/background.png}
+}
+
+\DeclareOption{red}{
+    \renewcommand{\maincolorRGB}{128, 57, 61}
+    \renewcommand{\colorlogoPath}{src/Red/color-logo.png}
+    \renewcommand{\translogoPath}{src/Red/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/Red/background.png}
+    \renewcommand{\qaStr}{\textbf{全世界无产者，联合起来！}}
+}
+
+\ProcessOptions\relax
+
+% --- typeset & elements settings ---
+% force 16:9 aspect ratio
+\geometry{paperwidth=16cm,paperheight=9cm}
+
+% logo
+\pgfdeclareimage[width=0.09\paperwidth]{colorlogo}{\colorlogoPath}
+\pgfdeclareimage[width=0.09\paperwidth]{translogo}{\translogoPath}
+\newcommand{\@makelogo}{colorlogo}
+
+\setbeamertemplate{headline}{\hspace{0.06\textwidth}\pgfuseimage{\@makelogo}} % put the logo in each slide's top left area
+
+% color
+\definecolor{maincolor}{RGB}{\maincolorRGB}
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{morelightgray}{rgb}{0.9, 0.9, 0.9}
+
+\newcommand{\themecolor}[1]{
+    \ifstrequal{#1}{colorbg}{
+        \renewcommand{\@makelogo}{translogo}
+        \setbeamercolor{normal text}{fg=white, bg=maincolor}
+        \setbeamercolor{structure}{fg=white}
+        \setbeamercolor{block title}{fg=maincolor, bg=sintefgrey}
+        \setbeamercolor{block body}{fg=maincolor, bg=sintefgrey}
+    }{
+        \renewcommand{\@makelogo}{colorlogo}
+        \setbeamercolor{normal text}{fg=darkgray, bg=white}
+        \setbeamercolor{structure}{fg=maincolor}
+        \setbeamercolor{block title}{fg=airforceblue, bg=morelightgray}
+        \setbeamercolor{block body}{fg=darkgray, bg=morelightgray}
+    }
+}
+\themecolor{white} % default: white theme
+% P.S. Beamer colors should be set in the preamble. It often works fine in the document itself, but NOT for normal text foreground. Thus \themecolor should only be called from the preamble
+
+\setbeamercolor{title}{fg=maincolor}
+\setbeamercolor{alerted text}{fg=maincolor}
+\setbeamercolor{author}{fg=black}
+\setbeamercolor{date}{fg=black}
+
+% font
+% \renewcommand{\familydefault}{\sfdefault}  % sans-serif
+\usefonttheme{serif}
+
+\setbeamerfont{title}{series=\scshape, size=\Large}
+\setbeamerfont{subtitle}{series=\mdseries, size=\normalsize}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{date}{size=\normalsize}
+
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{framesubtitle}{series=\mdseries}
+\setbeamerfont{block title}{series=\centering, size=\small}
+\setbeamerfont{block body}{size=\scriptsize}
+
+\setbeamerfont{footline}{size=\scriptsize}
+
+% no navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% footline
+\newcommand{\@footlinepayoff}{\@SINTEFmotto}
+\setbeamertemplate{footline}{
+    \begin{beamercolorbox}[wd=\textwidth, ht=5mm, dp=3mm, rightskip=1cm]{footline}
+    \usebeamerfont{footline}\hfill\@footlinepayoff
+    \end{beamercolorbox}
+}
+
+\newcommand{\footlinecolor}[1]{
+    % if #1 is empty, makes footline transparent
+    \ifstrempty{#1}{
+        \renewcommand{\@footlinepayoff}{}
+        \setbeamercolor{footline}{bg=}
+        \setbeamercolor{block title}{fg=white, bg=maincolor}
+        \setbeamercolor{block body}{fg=white, bg=maincolor}
+    }{
+        \renewcommand{\@footlinepayoff}{\@SINTEFmotto}
+        \setbeamercolor{footline}{fg=white, bg=#1}
+        \setbeamercolor{block title}{fg=white, bg=#1}
+        \setbeamercolor{block body}{fg=white, bg=#1}
+    }
+}
+\footlinecolor{} % default: no footline
+
+% block
+\setbeamertemplate{blocks}[rounded]
+
+% bullets
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{\textemdash}
+\setbeamertemplate{itemize subsubitem}{\ensuremath{\circ}}
+
+% table of cotents
+\setbeamertemplate{section in toc}{$\blacktriangleright$~\inserttocsection}  % section name format
+\setbeamertemplate{subsection in toc}{}  % don't present subsection
+
+% code bolck setting
+\definecolor{codegreen}{RGB}{101,218,120}
+\definecolor{darkgreen}{RGB}{93,158,82}
+\definecolor{darkyellow}{RGB}{245,194,105}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{airforceblue},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    xleftmargin=10pt,
+    xrightmargin=10pt,
+}
+
+\lstset{style=mystyle}
+
+% --- section & frame setting ---
+% subsection
+\newcommand{\strsubsec}{Section \thesection.\thesubsection}
+
+% presents subtitle on each frame
+\makeatletter
+    \pretocmd\beamer@checkframetitle{\framesubtitle{\thesection \, \secname}}
+\makeatother
+
+% avoid numbering of frames that are breaked into multiply slides
+\setbeamertemplate{frametitle continuation}{}
+
+% section page with the current section highlighted
+\AtBeginSection[]
+{
+    \begingroup
+    \setbeamertemplate{footline}{}
+    \themecolor{colorbg}
+    \begin{frame}{\tocStr}
+        \tableofcontents[currentsection]
+    \end{frame}
+    \endgroup
+}
+
+% subsection title page
+\AtBeginSubsection[]
+{
+    \begin{frame}{\,}{\thesection \, \secname}
+        \fontfamily{ptm}\selectfont
+        \centering\textsl{\textbf{\textcolor{maincolor}{
+            \large Section \thesection.\thesubsection
+            \vskip15pt
+            \LARGE \subsecname
+        }}}
+    \end{frame}
+}
+
+% --- page elements ---
+% frame title & subtitle layout
+\setbeamertemplate{frametitle}{
+    \vspace*{-3.5ex}
+    \begin{beamercolorbox}[leftskip=2cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle\\
+    \usebeamerfont{framesubtitle}\insertframesubtitle
+    \end{beamercolorbox}
+}
+
+% title page
+\setbeamertemplate{title page}{
+    \hspace{-12mm}  % pull back the box in an inelegant way - but it works!
+    \begin{beamercolorbox}[wd=0.9\textwidth, sep=10pt, leftskip=8mm]{title}
+        {\usebeamerfont{title}\inserttitle}\\
+        \vskip5pt{\usebeamerfont{subtitle}\insertsubtitle}\\
+        \vskip5pt{\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor}\\
+        \vskip5pt{\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate}
+    \end{beamercolorbox}
+}
+
+\renewcommand{\maketitle}{
+    \begingroup
+        \setbeamertemplate{footline}{}
+        \setbeamertemplate{background}{
+            \includegraphics[height=\paperheight]{\backgroundPath}
+        }
+        \begin{frame}
+            \titlepage
+        \end{frame}
+    \endgroup
+}
+
+% Q&A page
+\newcommand{\QApage}{
+    \begingroup
+        \setbeamertemplate{footline}{}
+        \themecolor{colorbg}
+        
+        \begin{frame}{}
+            \centering
+            \begin{minipage}{\textwidth}
+                \usebeamercolor[fg]{normal text}
+                \centering
+                \Huge $$\mathcal Q \& \mathcal A$$
+                \Large \qaStr
+            \end{minipage}
+        \end{frame}
+    \endgroup
+}
+
+% bibliography page
+\newcommand{\bibliographpage}{
+    \section{References}
+
+    \begingroup
+    \themecolor{colorbg}
+    \begin{frame}[allowframebreaks]{References}{\,}
+        \tiny
+        \printbibliography[heading=none]
+    \end{frame}
+\endgroup
+}
+
+% --- commands ---
+% set colored hyperlinks command
+\newcommand{\bhref}[2]{\textcolor{airforceblue}{\href{#1}{#2}}}
+
+% centering paragraph statement
+\newcommand{\centerstate}[1]{
+    \centering
+    \begin{columns}
+        \begin{column}{0.8\textwidth}
+            #1
+        \end{column}
+    \end{columns}
+}
+
+\newcommand{\tbf}[1]{\texttt{\textcolor{airforceblue}{[#1]}}}
+
+% coloured textbf
+\newcommand{\ctextbf}[1]{\textbf{\textcolor{maincolor}{#1}}}
+\newcommand{\btextbf}[1]{\textbf{\textcolor{airforceblue}{#1}}}
+
+% coloured textsl
+\newcommand{\ctextsl}[1]{\textsl{\textcolor{maincolor}{#1}}}
+\newcommand{\btextsl}[1]{\textsl{\textcolor{airforceblue}{#1}}}
+
+% coloured emph
+\newcommand{\cemph}[1]{\emph{\textcolor{maincolor}{#1}}}
+\newcommand{\bemph}[1]{\emph{\textcolor{airforceblue}{#1}}}
+
+% coloured texttt
+\newcommand{\ctexttt}[1]{\texttt{\textcolor{maincolor}{#1}}}
+\newcommand{\btexttt}[1]{\texttt{\textcolor{airforceblue}{#1}}}
