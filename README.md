@@ -18,15 +18,15 @@ Below shows some examples:
 ## Title pages for colleges/institutes
 
 - The Hong Kong Polytechnic University
-![PolyU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png)
+![PolyU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/PolyU.png?raw=true)
 - Southwest University
-![SWU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SWU.png)
+![SWU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SWU.png?raw=true)
 - Shenzhen University
-![SZU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SZU.png)
+![SZU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SZU.png?raw=true)
 - Shenzhen Academic of Environmental Science
-![SAES](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SAES.png)
+![SAES](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SAES.png?raw=true)
 - Harbin Institute of Technology
-![HIT](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/HIT.png)
+![HIT](https://github.com/liu-qilong/college-beamer/blob/main/gallery/HIT.png?raw=true)
   > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 
 ### Switch college/institute
@@ -56,15 +56,15 @@ To switch the language, just change the language option in the `collegeBeamer` p
 - Table of Contents
 
   At the beginning of each section, the table of contents will be shown with the current chapter highlighted.
-![toc](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/table%20of%20contents.png)
+![toc](https://github.com/liu-qilong/college-beamer/blob/main/gallery/table%20of%20contents.png?raw=true)
 - Sub-section page
-![ssec](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/subsection.png)
+![ssec](https://github.com/liu-qilong/college-beamer/blob/main/gallery/subsection.png?raw=true)
 - Math equation
-![math](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/math.png)
+![math](https://github.com/liu-qilong/college-beamer/blob/main/gallery/math.png?raw=true)
 - Code block
-![code](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/code.png)
+![code](https://github.com/liu-qilong/college-beamer/blob/main/gallery/code.png?raw=true)
 - End page
-![end](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/end.png)
+![end](https://github.com/liu-qilong/college-beamer/blob/main/gallery/end.png?raw=true)
 
 ## Add your own college?
 
@@ -86,10 +86,10 @@ Starting from the 37-th line of `collegebeamer.sty`, all college/institute optio
 
 ```
 \DeclareOption{polyu}{
-\renewcommand{\maincolorRGB}{128, 57, 61}  % the theme's main color in RGB
-\renewcommand{\colorlogoPath}{src/PolyU/color-logo.png}  % path to the logo image with background color
-\renewcommand{\translogoPath}{src/PolyU/trans-logo.png}  % path to the logo image with transparent background
-\renewcommand{\backgroundPath}{src/PolyU/background.png}  % path to the background image
+  \renewcommand{\maincolorRGB}{128, 57, 61}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/PolyU/color-logo.png?raw=true}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/PolyU/trans-logo.png?raw=true}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/PolyU/background.png?raw=true}  % path to the background image
 }
 ```
 
@@ -97,6 +97,6 @@ Noted that the theme's main color will be used in the front-ground of titles and
 
 Now you have your brand new template 👏🎉
 
-## Issues & Suggestions
+## Issues & suggestions
 
 If you have any revision suggestions, please create an issue in this repository. Thanks indeed🤝
