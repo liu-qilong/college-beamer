@@ -28,6 +28,8 @@ Below shows some examples:
 - Harbin Institute of Technology
 ![HIT](https://github.com/liu-qilong/college-beamer/blob/main/gallery/HIT.png?raw=true)
   > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
+- Zhejiang A&F University
+![ZAFU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/ZAFU.png?raw=true)
 
 ### Switch college/institute
 
