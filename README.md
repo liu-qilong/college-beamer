@@ -30,6 +30,7 @@ Below shows some examples:
   > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 - Zhejiang A&F University
 ![ZAFU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/ZAFU.png?raw=true)
+  > Thanks [ke1ewang](https://github.com/ke1ewang) for contributing this template!
 
 ### Switch college/institute
 
@@ -89,13 +90,15 @@ Starting from the 37-th line of `collegebeamer.sty`, all college/institute optio
 ```
 \DeclareOption{polyu}{
   \renewcommand{\maincolorRGB}{128, 57, 61}  % the theme's main color in RGB
-  \renewcommand{\colorlogoPath}{src/PolyU/color-logo.png?raw=true}  % path to the logo image with background color
-  \renewcommand{\translogoPath}{src/PolyU/trans-logo.png?raw=true}  % path to the logo image with transparent background
-  \renewcommand{\backgroundPath}{src/PolyU/background.png?raw=true}  % path to the background image
+  \renewcommand{\colorlogoPath}{src/PolyU/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/PolyU/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/PolyU/background.png}  % path to the background image
 }
 ```
 
-Noted that the theme's main color will be used in the front-ground of titles and backgorund colors of the sectional page.
+Noted that the theme's main color will be used in the front-ground of titles and background colors of the sectional page.
+
+> _P.S. You may also choose to use a logo with white background for `\translogoPath`. Please refer to [issue #8](https://github.com/liu-qilong/college-beamer/issues/8) for considerations._
 
 Now you have your brand new template 👏🎉
 
