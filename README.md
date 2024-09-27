@@ -45,13 +45,11 @@ To switch the language, just change the language option in the `collegeBeamer` p
 \usepackage[szu,zh]{collegeBeamer}
 ```
 
-> When select `zh`, please add the `xeCJK`package to the preamble and use XeLaTeX as the typesetting engine.
+> When select `zh`, please add the `xeCJK`package to the preamble and use [XeLaTeX](https://www.overleaf.com/learn/latex/XeLaTeX) as the typesetting engine.
 
 ```
 \usepackage{xeCJK}
 ```
-
-Please use `XeLaTeX` engine for typesetting.
 
 ### Page elements
 
