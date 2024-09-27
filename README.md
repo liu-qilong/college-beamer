@@ -1,21 +1,8 @@
-# college-beamer
+# `college-beamer`
 
 Hi👋 Here are some beamer templates which are secondary creations of [SINTEF Presentation](https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx) template. Thanks [Federico Zenith](federico.zenith@sintef.no) for creating such well-designed works. To use it in my and my friends' schools/institutes, I rewrote and added some icons and features to adapt to specific surroundings✨.
 
-All templates have been submitted to [Gallery - Overleaf](https://cs.overleaf.com/gallery), please check them here👇
-
-- [The Honk Kong Polytechnic University (PolyU) Beamer Presentation Theme - Overleaf](https://www.overleaf.com/latex/templates/the-honk-kong-polytechnic-university-polyu-beamer-presentation-theme/vywngqprjwrq)
-- [西南大学 SWU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/xi-nan-da-xue-swu-beamer-mo-ban-zhu-ti/bgprxfbyhqsb)
-- [深圳大学 SZU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-da-xue-szu-beamer-mo-ban/bjwzmkpsgygf)
-- [深圳环境科学院 SAES Beamer 模版 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
-- [哈尔滨工业大学 Beamer 模版](https://www.overleaf.com/latex/templates/harbin-institute-of-technology-hit-beamer-presentation-theme/prwxqwfdzkqj)
-  > Thank [LeeWlving](https://github.com/LeeWlving) for contributing this template!
-
-> Noted that if you'd like to include Chinese text, please use XeLaTeX for typesetting.
-
-Below shows some examples:
-
-## Title pages for colleges/institutes
+## Colleges & institutes
 
 - The Hong Kong Polytechnic University
 ![PolyU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/PolyU.png?raw=true)
@@ -27,10 +14,20 @@ Below shows some examples:
 ![SAES](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SAES.png?raw=true)
 - Harbin Institute of Technology
 ![HIT](https://github.com/liu-qilong/college-beamer/blob/main/gallery/HIT.png?raw=true)
-  > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
+  > Thank [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 - Zhejiang A&F University
 ![ZAFU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/ZAFU.png?raw=true)
-  > Thanks [ke1ewang](https://github.com/ke1ewang) for contributing this template!
+  > Thank [ke1ewang](https://github.com/ke1ewang) for contributing this template!
+
+Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
+
+- [The Honk Kong Polytechnic University (PolyU) Beamer Presentation Theme - Overleaf](https://www.overleaf.com/latex/templates/the-honk-kong-polytechnic-university-polyu-beamer-presentation-theme/vywngqprjwrq)
+- [西南大学 SWU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/xi-nan-da-xue-swu-beamer-mo-ban-zhu-ti/bgprxfbyhqsb)
+- [深圳大学 SZU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-da-xue-szu-beamer-mo-ban/bjwzmkpsgygf)
+- [深圳环境科学院 SAES Beamer 模版 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
+- [哈尔滨工业大学 Beamer 模版](https://www.overleaf.com/latex/templates/harbin-institute-of-technology-hit-beamer-presentation-theme/prwxqwfdzkqj)
+
+## Options & usage
 
 ### Switch college/institute
 
@@ -54,7 +51,9 @@ To switch the language, just change the language option in the `collegeBeamer` p
 \usepackage{xeCJK}
 ```
 
-## Page elements
+Please use `XeLaTeX` engine for typesetting.
+
+### Page elements
 
 - Table of Contents
 
