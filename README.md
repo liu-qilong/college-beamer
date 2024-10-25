@@ -26,6 +26,7 @@ Some of these templates have been submitted to [Overleaf](https://cs.overleaf.co
 - [深圳大学 SZU Beamer 模板](https://www.overleaf.com/latex/templates/shen-zhen-da-xue-szu-beamer-mo-ban/bjwzmkpsgygf)
 - [深圳环境科学院 SAES Beamer 模版](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
 - [哈尔滨工业大学 Beamer 模版](https://www.overleaf.com/latex/templates/harbin-institute-of-technology-hit-beamer-presentation-theme/prwxqwfdzkqj)
+- [浙江农林大学 ZAFU Beamer 模版](https://www.overleaf.com/latex/templates/zafu-beamer-theme-beta/rcxzphbhnddf)
 
 ## Options & usage
 
