@@ -107,14 +107,10 @@
         \renewcommand{\@makelogo}{translogo}
         \setbeamercolor{normal text}{fg=white, bg=maincolor}
         \setbeamercolor{structure}{fg=white}
-        \setbeamercolor{block title}{fg=airforceblue, bg=morelightgray}
-        \setbeamercolor{block body}{fg=darkgray, bg=morelightgray}
     }{
         \renewcommand{\@makelogo}{colorlogo}
         \setbeamercolor{normal text}{fg=darkgray, bg=white}
         \setbeamercolor{structure}{fg=maincolor}
-        \setbeamercolor{block title}{fg=airforceblue, bg=morelightgray}
-        \setbeamercolor{block body}{fg=darkgray, bg=morelightgray}
     }
 }
 \themecolor{white} % default: white theme
@@ -136,9 +132,6 @@
 
 \setbeamerfont{frametitle}{series=\bfseries}
 \setbeamerfont{framesubtitle}{series=\mdseries}
-\setbeamerfont{block title}{series=\centering, size=\small}
-\setbeamerfont{block body}{size=\scriptsize}
-
 \setbeamerfont{footline}{size=\scriptsize}
 
 % no navigation symbols
@@ -157,19 +150,19 @@
     \ifstrempty{#1}{
         \renewcommand{\@footlinepayoff}{}
         \setbeamercolor{footline}{bg=}
-        \setbeamercolor{block title}{fg=airforceblue, bg=morelightgray}
-        \setbeamercolor{block body}{fg=darkgray, bg=morelightgray}
     }{
         \renewcommand{\@footlinepayoff}{\@SINTEFmotto}
         \setbeamercolor{footline}{fg=white, bg=#1}
-        \setbeamercolor{block title}{fg=white, bg=#1}
-        \setbeamercolor{block body}{fg=white, bg=#1}
     }
 }
 \footlinecolor{} % default: no footline
 
 % block
 \setbeamertemplate{blocks}[rounded]
+\setbeamerfont{block title}{series=\centering, size=\small}
+\setbeamerfont{block body}{size=\scriptsize}
+\setbeamercolor{block title}{fg=airforceblue, bg=morelightgray}
+\setbeamercolor{block body}{fg=darkgray, bg=morelightgray}
 
 % bullets
 \setbeamertemplate{itemize item}{\textbullet}
