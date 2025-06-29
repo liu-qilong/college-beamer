@@ -18,3 +18,5 @@ build/
 *.pdf
 *.fdb_latexmk
 *.fls
+*.vrb
+*.xdv
