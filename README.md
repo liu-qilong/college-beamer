@@ -1,23 +1,29 @@
-# `college-beamer`
+# College Beamer
 
 Hi👋 Here are some beamer templates which are secondary creations of [SINTEF Presentation](https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx) template. Thanks [Federico Zenith](federico.zenith@sintef.no) for creating such well-designed works. To use it in my and my friends' schools/institutes, I rewrote and added some icons and features to adapt to specific surroundings✨.
 
 ## Colleges & institutes
 
 - The Hong Kong Polytechnic University
-![PolyU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/PolyU.png?raw=true)
+![PolyU](/gallery/PolyU.png?raw=true)
 - Southwest University
-![SWU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SWU.png?raw=true)
+![SWU](/gallery/SWU.png?raw=true)
 - Shenzhen University
-![SZU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SZU.png?raw=true)
+![SZU](/gallery/SZU.png?raw=true)
 - Shenzhen Academic of Environmental Science
-![SAES](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SAES.png?raw=true)
+![SAES](/gallery/SAES.png?raw=true)
 - Harbin Institute of Technology
-![HIT](https://github.com/liu-qilong/college-beamer/blob/main/gallery/HIT.png?raw=true)
+![HIT](/gallery/HIT.png?raw=true)
   > Thank [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 - Zhejiang A&F University
-![ZAFU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/ZAFU.png?raw=true)
+![ZAFU](/gallery/ZAFU.png?raw=true)
   > Thank [ke1ewang](https://github.com/ke1ewang) for contributing this template!
+- Northwestern Polytechnic University
+![NWPU](/gallery/NWPU.png?raw=true)
+  > Thank [chellyzzz](https://github.com/chellyzzz) for contributing this template!
+- Chongqing University
+![CQU](/gallery/CQU.png?raw=true)
+  > Thank [ZackH2002](https://github.com/ZackH2002) for contributing this template!
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
@@ -40,6 +46,9 @@ Switching between different college/institute is quite easy, just add college/in
 
 ### Switch language
 
+- English example: `pre.tex`
+- Chinese example: `pre-zh.tex`
+
 To switch the language, just change the language option in the `collegeBeamer` package. For example, to switch to the Chinese language, add `zh` to the package:
 
 ```
@@ -57,15 +66,15 @@ To switch the language, just change the language option in the `collegeBeamer` p
 - Table of Contents
 
   At the beginning of each section, the table of contents will be shown with the current chapter highlighted.
-![toc](https://github.com/liu-qilong/college-beamer/blob/main/gallery/table%20of%20contents.png?raw=true)
+![toc](/gallery/table%20of%20contents.png?raw=true)
 - Sub-section page
-![ssec](https://github.com/liu-qilong/college-beamer/blob/main/gallery/subsection.png?raw=true)
+![ssec](/gallery/subsection.png?raw=true)
 - Math equation
-![math](https://github.com/liu-qilong/college-beamer/blob/main/gallery/math.png?raw=true)
+![math](/gallery/math.png?raw=true)
 - Code block
-![code](https://github.com/liu-qilong/college-beamer/blob/main/gallery/code.png?raw=true)
+![code](/gallery/code.png?raw=true)
 - End page
-![end](https://github.com/liu-qilong/college-beamer/blob/main/gallery/end.png?raw=true)
+![end](/gallery/end.png?raw=true)
 
 ## Add your own college?
 
