@@ -58,7 +58,11 @@ To switch the language, just change the language option in the `collegeBeamer` p
 
 ```
 \usepackage[heu,en]{collegeBeamer} % For English
-% or
+```
+
+or
+
+```
 \usepackage[heu,zh]{collegeBeamer} % For Chinese (requires XeLaTeX)
 ```
 
