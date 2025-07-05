@@ -21,11 +21,15 @@
     \renewcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
 }
 
-\DeclareOption{zh}{
-    % add to the preamble: \usepackage{xeCJK}
-    % compile with xeLaTeX
+\DeclareOption{zh}{%
+  \AtEndOfPackage{%
+    \RequirePackage{xeCJK}
+    \setCJKmainfont{Source Han Serif SC}
+    \setCJKsansfont{Source Han Sans SC}
+    \setCJKmonofont{Source Han Sans SC}
     \renewcommand{\tocStr}{目录}
     \renewcommand{\qaStr}{\textbf{感谢您的聆听和反馈}}
+  }
 }
 
 % colleges & institutes
