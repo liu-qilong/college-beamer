@@ -21,11 +21,24 @@
     \renewcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
 }
 
-\DeclareOption{zh}{
-    % add to the preamble: \usepackage{xeCJK}
-    % compile with xeLaTeX
+\newif\ifcollegebeamer@zh
+
+% Chinese option
+\DeclareOption{zh}{%
+  \collegebeamer@zhtrue
+  \AtEndOfPackage{%
+    \RequirePackage{ifxetex}
+    \RequirePackage{xeCJK}
+    \setCJKmainfont{Source Han Serif SC}
+    \setCJKsansfont{Source Han Sans SC}
+    \setCJKmonofont{Source Han Sans SC}
     \renewcommand{\tocStr}{目录}
     \renewcommand{\qaStr}{\textbf{感谢您的聆听和反馈}}
+    \ifxetex
+    \else
+      \PackageError{collegeBeamer}{请使用 XeLaTeX 编译此模板！}{}
+    \fi
+  }
 }
 
 % colleges & institutes
@@ -55,11 +68,18 @@
     \renewcommand{\backgroundPath}{src/SWU/background.png}
 }
 
+\DeclareOption{heu}{
+    \renewcommand{\maincolorRGB}{2, 77, 162}
+    \renewcommand{\colorlogoPath}{src/HEU/color-logo.png}
+    \renewcommand{\translogoPath}{src/HEU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/HEU/background.pdf}
+}
+
 \DeclareOption{hit}{
     \renewcommand{\maincolorRGB}{42, 101, 128}
-    \renewcommand{\colorlogoPath}{src/hit/color-logo.png}
-    \renewcommand{\translogoPath}{src/hit/trans-logo.png}
-    \renewcommand{\backgroundPath}{src/hit/background.png}
+    \renewcommand{\colorlogoPath}{src/HIT/color-logo.png}
+    \renewcommand{\translogoPath}{src/HIT/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/HIT/background.png}
 }
 
 \DeclareOption{saes}{
@@ -139,7 +159,14 @@
 % \renewcommand{\familydefault}{\sfdefault}  % sans-serif
 \usefonttheme{serif}
 
-\setbeamerfont{title}{series=\scshape, size=\Large}
+\AtEndOfPackage{%
+  \ifcollegebeamer@zh
+    \setbeamerfont{title}{series=\bfseries, size=\Large}
+  \else
+    \setbeamerfont{title}{series=\scshape, size=\Large}
+  \fi
+}
+
 \setbeamerfont{subtitle}{series=\mdseries, size=\normalsize}
 \setbeamerfont{author}{size=\normalsize}
 \setbeamerfont{date}{size=\normalsize}
