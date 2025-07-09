@@ -24,6 +24,9 @@ Hi👋 Here are some beamer templates which are secondary creations of [SINTEF P
 - Chongqing University
 ![CQU](/gallery/CQU.png?raw=true)
   > Thank [ZackH2002](https://github.com/ZackH2002) for contributing this template!
+- Harbin Engineering University
+![HEU](/gallery/HEU.png?raw=true)
+  > Thank [Rui Yann](https://github.com/Shu1L0n9) for contributing this template!
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 

@@ -10,6 +10,7 @@
 \RequirePackage{verbatim}
 \RequirePackage{animate}
 \RequirePackage{xcolor}
+\RequirePackage{ifplatform}
 
 % --- package options ---
 % languages
@@ -29,9 +30,18 @@
   \AtEndOfPackage{%
     \RequirePackage{ifxetex}
     \RequirePackage{xeCJK}
-    \setCJKmainfont{Source Han Serif SC}
-    \setCJKsansfont{Source Han Sans SC}
-    \setCJKmonofont{Source Han Sans SC}
+    
+    % os specific font setting
+    \ifwindows
+        \setCJKmainfont{SimSun}
+    \fi
+    \ifmacosx
+        \setCJKmainfont{Songti SC}
+    \fi
+    \iflinux
+        \setCJKmainfont{Noto Serif CJK SC}
+    \fi
+
     \renewcommand{\tocStr}{目录}
     \renewcommand{\qaStr}{\textbf{感谢您的聆听和反馈}}
     \ifxetex
