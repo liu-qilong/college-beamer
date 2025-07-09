@@ -44,21 +44,26 @@ Switching between different college/institute is quite easy, just add college/in
 \usepackage[polyu,en]{collegeBeamer}
 ```
 
+### Language Selection
+
+To change the language of the slides, simply set the option to en (English) or zh (Chinese).
+All necessary configurations are already handled in the .sty file.
+
+Note:
+If you select zh (Chinese), please use the XeLaTeX compiler for proper font support.
+
 ### Switch language
 
-- English example: `pre.tex`
-- Chinese example: `pre-zh.tex`
-
-To switch the language, just change the language option in the `collegeBeamer` package. For example, to switch to the Chinese language, add `zh` to the package:
+To switch the language, just change the language option in the `collegeBeamer` package. For example:
 
 ```
-\usepackage[szu,zh]{collegeBeamer}
+\usepackage[heu,en]{collegeBeamer} % For English
 ```
 
-> When select `zh`, please add the `xeCJK`package to the preamble and use [XeLaTeX](https://www.overleaf.com/learn/latex/XeLaTeX) as the typesetting engine.
+or
 
 ```
-\usepackage{xeCJK}
+\usepackage[heu,zh]{collegeBeamer} % For Chinese (requires XeLaTeX)
 ```
 
 ### Page elements
