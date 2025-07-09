@@ -1,7 +1,7 @@
 \documentclass{beamer}
-% === collegeBeamer.sty 可用选项 ===
+% === collegeBeamer.sty options 可用选项 ===
 %
-% --- 学校/机构主题选项（University/Institute Options）---
+% --- University/Institute Options 大学/机构 ---
 % [polyu]  % 香港理工大学（PolyU）
 % [szu]    % 深圳大学（SZU）
 % [swu]    % 西南大学（SWU）
@@ -12,101 +12,104 @@
 % [red]    % 通用红色主题（Red）
 % [nwpu]   % 西北工业大学（NWPU）
 % [CQU]    % 重庆大学（CQU）
-% 
-% --- 语言选项（Language Options）---
-% [en]   % 英文界面，要使用pdflLaTex
-% [zh]   % 中文界面，自动加载 xeCJK 和中文字体，要用 XeLaTeX 编译
 %
-% --- 示例使用方式 ---
-\usepackage[polyu,en]{collegeBeamer}
+% --- Language Options 语言 ---
+% [en]     % English, pls compile with pdflLaTeX 英语，请使用 pdflLaTeX 编译
+% [zh]     % Chinese, automatically loads xeCJK and Chinese fonts, pls compile with XeLaTeX 中文，自动加载 xeCJK 包和中文字体，请使用 XeLaTeX 编译
+%
+% --- Example Usage ---
+\usepackage[heu,zh]{collegeBeamer}
 
 % meta-data
-\title{PolyU Beamer Template}
+\title{哈尔滨工程大学 Beamer 模版}
 \subtitle{Using \LaTeX\ to prepare slides}
-\author{Qilong Liu}
-\date{22 May 2022}
+\author{Rui Yann}
+\date{6 Jul 2025}
 
 % document body
 \begin{document}
-	
-	\maketitle
-	
-	\begin{frame}
-		This template is a secondary creation of \bhref{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation} template from \bhref{mailto:federico.zenith@sintef.no}{Federico Zenith} \vspace{\baselineskip}
-		
-		Following is a brief introduction written by \bhref{mailto:federico.zenith@sintef.no}{Federico Zenith} about how to use \LaTeX\ and beamer to prepare slides. All rights reserved by him\vspace{\baselineskip}
-		
-		This template is released under \bhref{https://creativecommons.org/licenses/by-nc/4.0/legalcode}{Creative Commons CC BY 4.0} license
-	\end{frame}
-	
-	\section{Introduction}
-	
-	\begin{frame}{Beamer for SINTEF slides}{\thesection \, \secname}
-		\begin{itemize}
-			\item We assume you can use \LaTeX; if you cannot, \bhref{http://en.wikibooks.org/wiki/LaTeX/}{you can learn it here}
-			\item Beamer is one of the most popular and powerful document classes for presentations in \LaTeX
-			\item Beamer has also a detailed \bhref{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{user manual}
-			\item Here we will present only the most basic features to get you up to speed
-		\end{itemize}
-	\end{frame}
-	
-	\begin{frame}{Beamer vs. PowerPoint}
-		Compared to PowerPoint, using \LaTeX\ is better because:
-		\begin{itemize}
-			\item It is not What-You-See-Is-What-You-Get, but
-			What-You-\emph{Mean}-Is-What-You-Get:\\
-			you write the content, the computer does the typesetting
-			\item Produces a \texttt{pdf}: no problems with fonts, formulas, program versions
-			\item Easier to keep consistent style, fonts, highlighting, etc.
-			\item Math typesetting in \TeX\ is the best:
-			\begin{equation*}
-				\mathrm{i}\,\hslash\frac{\partial}{\partial t} \Psi(\mathbf{r},t) =
-				-\frac{\hslash^2}{2\,m}\nabla^2\Psi(\mathbf{r},t)
-				+ V(\mathbf{r})\Psi(\mathbf{r},t)
-			\end{equation*}
-		\end{itemize}
-	\end{frame}
-	
-	\section{Editing}
-	
-	\begin{frame}[fragile]{Selecting the Class}
-		After the last update to the graphic profile, the \texttt{sintef} theme for
-		Beamer has been updated into a full-fledged class.
-		To start working with \texttt{sintefbeamer}, start a \LaTeX\ document with the preamble:
-		\begin{block}{Minimum Beamer Document}
-			\begin{lstlisting}[language=TeX]
+    
+    \maketitle
+    
+    \begin{frame}
+        This template is a secondary creation of \bhref{https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx}{SINTEF Presentation} template from \bhref{mailto:federico.zenith@sintef.no}{Federico Zenith} \vspace{\baselineskip}
+        
+        Following is a brief introduction written by \bhref{mailto:federico.zenith@sintef.no}{Federico Zenith} about how to use \LaTeX\ and beamer to prepare slides. All rights reserved by him\vspace{\baselineskip}
+        
+        This template is released under \bhref{https://creativecommons.org/licenses/by-nc/4.0/legalcode}{Creative Commons CC BY 4.0} license
+    \end{frame}
+    
+    \section{Introduction}
+    
+    \begin{frame}{Beamer for SINTEF slides}{\thesection \, \secname}
+        \begin{itemize}
+            \item We assume you can use \LaTeX; if you cannot, \bhref{http://en.wikibooks.org/wiki/LaTeX/}{you can learn it here}
+            \item Beamer is one of the most popular and powerful document classes for presentations in \LaTeX
+            \item Beamer has also a detailed \bhref{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}{user manual}
+            \item Here we will present only the most basic features to get you up to speed
+        \end{itemize}
+    \end{frame}
+    
+    \begin{frame}{Beamer vs. PowerPoint}
+        Compared to PowerPoint, using \LaTeX\ is better because:
+        \begin{itemize}
+            \item It is not What-You-See-Is-What-You-Get, but
+            What-You-\emph{Mean}-Is-What-You-Get:\\
+            you write the content, the computer does the typesetting
+            \item Produces a \texttt{pdf}: no problems with fonts, formulas, program versions
+            \item Easier to keep consistent style, fonts, highlighting, etc.
+            \item Math typesetting in \TeX\ is the best:
+            \begin{equation*}
+                \mathrm{i}\,\hslash\frac{\partial}{\partial t} \Psi(\mathbf{r},t) =
+                -\frac{\hslash^2}{2\,m}\nabla^2\Psi(\mathbf{r},t)
+                + V(\mathbf{r})\Psi(\mathbf{r},t)
+            \end{equation*}
+        \end{itemize}
+    \end{frame}
+    
+    \section{Editing}
+    
+    \begin{frame}[fragile]{Selecting the Class}
+        After the last update to the graphic profile, the \texttt{sintef} theme for
+        Beamer has been updated into a full-fledged class.
+        To start working with \texttt{sintefbeamer}, start a \LaTeX\ document with the preamble:
+        \begin{block}{Minimum Beamer Document}
+            \begin{lstlisting}[language=TeX]
 \documentclass{beamer}
 \begin{document}
-    \begin{frame}{Hello, world!}
-        \end {frame}
+
+\begin{frame}{Hello, world!}
+    % contents
+\end {frame}
+
 \end{document}\end{lstlisting}
-			\end{block}
-		\end{frame}
-		
-		\begin{frame}[fragile]{Title page}
-			To set a typical title page, you call some commands in the preamble:
-			\begin{block}{The Commands for the Title Page}
-				\begin{lstlisting}[language=TeX]
+            \end{block}
+        \end{frame}
+        
+        \begin{frame}[fragile]{Title page}
+            To set a typical title page, you call some commands in the preamble:
+            \begin{block}{The Commands for the Title Page}
+                \begin{lstlisting}[language=TeX]
 \title{Sample Title}
 \subtitle{Sample subtitle}
 \author{First Author, Second Author}
 \date{Defaults to today's}\end{lstlisting}
-			\end{block}
-			You can then write out the title page with \verb|\maketitle|.
-			
-			You can set a different background image than the default one with the \verb|\titlebackground| command, set before \verb|\maketitle|.
-			
-			In the \texttt{backgrounds} folder, you can find a lot of standard backgrounds for SINTEF presentation title pages.
-		\end{frame}
-		
-		\begin{frame}[fragile]{Writing a Simple Slide}
-			\framesubtitle{It's really easy!}
-			\begin{itemize}[<+->]
-				\item A typical slide has bulleted lists
-				\item These can be uncovered in sequence
-			\end{itemize}
-			\begin{block}{Code for a Page with an Itemised List}<+->
-				\begin{lstlisting}[language=TeX]
+            \end{block}
+            You can then write out the title page with \verb|\maketitle|.
+            
+            You can set a different background image than the default one with the \verb|\titlebackground| command, set before \verb|\maketitle|.
+            
+            In the \texttt{backgrounds} folder, you can find a lot of standard backgrounds for SINTEF presentation title pages.
+        \end{frame}
+        
+        \begin{frame}[fragile]{Writing a Simple Slide}
+            \framesubtitle{It's really easy!}
+            \begin{itemize}[<+->]
+                \item A typical slide has bulleted lists
+                \item These can be uncovered in sequence
+            \end{itemize}
+            \begin{block}{Code for a Page with an Itemised List}<+->
+                \begin{lstlisting}[language=TeX]
 \begin{frame}
     \frametitle{Writing a Simple Slide}
     \framesubtitle{It's really easy!}
@@ -115,39 +118,39 @@
         \item These can be uncovered in sequence
     \end{itemize}
 \end{frame}\end{lstlisting}
-			\end{block}
-		\end{frame}
-		
-		\begin{frame}[fragile]{Adding images}
-			Adding images works like in normal \LaTeX:
-			\begin{columns}
-				\begin{column}{0.7\textwidth}
-					\begin{block}{Code for Adding Images}
-						\begin{lstlisting}[language=TeX]
+            \end{block}
+        \end{frame}
+        
+        \begin{frame}[fragile]{Adding images}
+            Adding images works like in normal \LaTeX:
+            \begin{columns}
+                \begin{column}{0.7\textwidth}
+                    \begin{block}{Code for Adding Images}
+                        \begin{lstlisting}[language=TeX]
 \usepackage{graphicx}
 % ...
 \includegraphics
 [width=\textwidth]{gallery/img.jpg}\end{lstlisting}
-					\end{block}
-				\end{column}
-				\begin{column}{0.3\textwidth}
-					\vskip5pt\includegraphics[width=\textwidth]{gallery/img.jpg}
-				\end{column}
-			\end{columns}
-		\end{frame}
-		
-		\begin{frame}[fragile]{Splitting in Columns}
-			Splitting the page is easy and common; typically, one side has a picture and the other text:
-			\begin{columns}
-				\begin{column}{0.6\textwidth}
-					This is the first column
-				\end{column}
-				\begin{column}{0.3\textwidth}
-					And this the second
-				\end{column}
-			\end{columns}
-			\begin{block}{Column Code}
-				\begin{lstlisting}[language=TeX]
+                    \end{block}
+                \end{column}
+                \begin{column}{0.3\textwidth}
+                    \vskip5pt\includegraphics[width=\textwidth]{gallery/img.jpg}
+                \end{column}
+            \end{columns}
+        \end{frame}
+        
+        \begin{frame}[fragile]{Splitting in Columns}
+            Splitting the page is easy and common; typically, one side has a picture and the other text:
+            \begin{columns}
+                \begin{column}{0.6\textwidth}
+                    This is the first column
+                \end{column}
+                \begin{column}{0.3\textwidth}
+                    And this the second
+                \end{column}
+            \end{columns}
+            \begin{block}{Column Code}
+                \begin{lstlisting}[language=TeX]
 \begin{columns}
     \begin{column}{0.6\textwidth}
         This is the first column
@@ -157,46 +160,46 @@
     \end{column}
     % There could be more!
 \end{columns}\end{lstlisting}
-			\end{block}
-		\end{frame}
-		
-		\begin{frame}[fragile]
-			\frametitle{Fonts}
-			\begin{itemize}
-				\item The paramount task of fonts is being readable
-				\item There are good ones...
-				\begin{itemize}
-					\item {\textrm{Use serif fonts only with high-definition projectors}}
-					\item {\textsf{Use sans-serif fonts otherwise (or if you simply prefer them)}}
-				\end{itemize}
-				\item ... and not so good ones:
-				\begin{itemize}
-					\item {\texttt{Never use monospace for normal text}}
-					\item {\frakfamily Gothic, calligraphic or weird fonts: should always: be
-						avoided}
-				\end{itemize}
-			\end{itemize}
-		\end{frame}
-		
-		\begin{frame}[fragile]{Look}
-			\begin{itemize}
-				\item To change the colour of the title dash, give one of the class options \texttt{cyandash} (default), \texttt{greendash}, \texttt{magentadash}, \texttt{yellowdash}, or \texttt{nodash}.
-				\item To change between the light and dark themes, give the class options \texttt{light} (default) or \texttt{dark}. It is not possible to switch theme for one slide because of the design of Beamer---and it's probably a good thing.
-				\item To insert a final slide, use \verb|\backmatter|.
-				\item The aspect ratio defaults to 16:9, but you can change it to 4:3 for old projectors by passing the class option \texttt{aspectratio=43}; any other values accepted by Beamer are also possible.
-			\end{itemize}
-		\end{frame}
-		
-		\section{Summary}
-		
-		\begin{frame}
-			\frametitle{Good Luck!}
-			\begin{itemize}
-				\item Enough for an introduction! You should know enough by now
-				\item If you have corrections or suggestions, \bhref{mailto:federico.zenith@sintef.no}{send them to me!}
-			\end{itemize}
-		\end{frame}
-		
-		\QApage
-		
-	\end{document}
+            \end{block}
+        \end{frame}
+        
+        \begin{frame}[fragile]
+            \frametitle{Fonts}
+            \begin{itemize}
+                \item The paramount task of fonts is being readable
+                \item There are good ones...
+                \begin{itemize}
+                    \item {\textrm{Use serif fonts only with high-definition projectors}}
+                    \item {\textsf{Use sans-serif fonts otherwise (or if you simply prefer them)}}
+                \end{itemize}
+                \item ... and not so good ones:
+                \begin{itemize}
+                    \item {\texttt{Never use monospace for normal text}}
+                    \item {\frakfamily Gothic, calligraphic or weird fonts: should always: be
+                        avoided}
+                \end{itemize}
+            \end{itemize}
+        \end{frame}
+        
+        \begin{frame}[fragile]{Look}
+            \begin{itemize}
+                \item To change the colour of the title dash, give one of the class options \texttt{cyandash} (default), \texttt{greendash}, \texttt{magentadash}, \texttt{yellowdash}, or \texttt{nodash}.
+                \item To change between the light and dark themes, give the class options \texttt{light} (default) or \texttt{dark}. It is not possible to switch theme for one slide because of the design of Beamer---and it's probably a good thing.
+                \item To insert a final slide, use \verb|\backmatter|.
+                \item The aspect ratio defaults to 16:9, but you can change it to 4:3 for old projectors by passing the class option \texttt{aspectratio=43}; any other values accepted by Beamer are also possible.
+            \end{itemize}
+        \end{frame}
+        
+        \section{Summary}
+        
+        \begin{frame}
+            \frametitle{Good Luck!}
+            \begin{itemize}
+                \item Enough for an introduction! You should know enough by now
+                \item If you have corrections or suggestions, \bhref{mailto:federico.zenith@sintef.no}{send them to me!}
+            \end{itemize}
+        \end{frame}
+        
+        \QApage
+        
+    \end{document}
