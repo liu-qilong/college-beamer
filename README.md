@@ -132,4 +132,4 @@ If you have any revision suggestions, please create an issue in this repository.
 We also welcome any contributions to this repository. If you have created a new college/institute theme, please consider making a pull request to add it to this repository. Thanks a lot🙏
 
 
-_P.S. Sadly, Overleaf no longer accepts institute-related templates from non-official accounts. Your contributed templates would be available only from this repository._
+_P.S. Sadly, Overleaf no longer accepts institute-related templates from non-official accounts. Your contributed templates would only be available from this repository._
