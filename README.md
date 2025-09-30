@@ -30,6 +30,9 @@ Hi👋 Here are some beamer templates which are secondary creations of [SINTEF P
 - Dongguan University of Technology
 ![DGUT](/gallery/DGUT.png?raw=true)
   > Thank [Penn Lam](https://github.com/Penn-Lam) for contributing this template!
+- Zhejiang University of Technology
+![ZJUT](/gallery/ZJUT.png?raw=true)
+  > Thank [Wei Hu](https://github.com/prexhu) for contributing this template!
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
@@ -39,6 +42,8 @@ Some of these templates have been submitted to [Overleaf](https://cs.overleaf.co
 - [深圳环境科学院 SAES Beamer 模版](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
 - [哈尔滨工业大学 Beamer 模版](https://www.overleaf.com/latex/templates/harbin-institute-of-technology-hit-beamer-presentation-theme/prwxqwfdzkqj)
 - [浙江农林大学 ZAFU Beamer 模版](https://www.overleaf.com/latex/templates/zafu-beamer-theme-beta/rcxzphbhnddf)
+
+_P.S. Sadly, Overleaf no longer accepts institute-related templates from non-official accounts._
 
 ## Options & usage
 
@@ -123,3 +128,8 @@ Now you have your brand new template 👏🎉
 ## Issues & suggestions
 
 If you have any revision suggestions, please create an issue in this repository. Thanks indeed🤝
+
+We also welcome any contributions to this repository. If you have created a new college/institute theme, please consider making a pull request to add it to this repository. Thanks a lot🙏
+
+
+_P.S. Sadly, Overleaf no longer accepts institute-related templates from non-official accounts. Your contributed templates would be available only from this repository._
