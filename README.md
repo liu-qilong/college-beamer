@@ -27,6 +27,9 @@ Hi👋 Here are some beamer templates which are secondary creations of [SINTEF P
 - Harbin Engineering University
 ![HEU](/gallery/HEU.png?raw=true)
   > Thank [Rui Yann](https://github.com/Shu1L0n9) for contributing this template!
+- Dongguan University of Technology
+![DGUT](/gallery/DGUT.png?raw=true)
+  > Thank [Penn Lam](https://github.com/Penn-Lam) for contributing this template!
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
