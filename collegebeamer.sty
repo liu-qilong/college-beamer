@@ -135,6 +135,13 @@
     \renewcommand{\backgroundPath}{src/DGUT/background.png}
 }
 
+\DeclareOption{zjut}{
+  \renewcommand{\maincolorRGB}{30, 79, 142}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/ZJUT/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/ZJUT/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
+}
+
 \ProcessOptions\relax
 
 % --- typeset & elements settings ---
@@ -323,7 +330,7 @@
     \begingroup
         \setbeamertemplate{footline}{}
         \setbeamertemplate{background}{
-            \includegraphics[height=\paperheight]{\backgroundPath}
+          \includegraphics[height=\paperheight]{\backgroundPath}
         }
         \begin{frame}
             \titlepage
