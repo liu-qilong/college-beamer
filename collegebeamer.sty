@@ -128,12 +128,20 @@
   \renewcommand{\backgroundPath}{src/CQU/background.png}  % path to the background image
 }
 
+\DeclareOption{dgut}{
+    \renewcommand{\maincolorRGB}{6, 120, 63}
+    \renewcommand{\colorlogoPath}{src/DGUT/color-logo.png}
+    \renewcommand{\translogoPath}{src/DGUT/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/DGUT/background.png}
+}
+
 \DeclareOption{zjut}{
   \renewcommand{\maincolorRGB}{30, 79, 142}  % the theme's main color in RGB
   \renewcommand{\colorlogoPath}{src/ZJUT/color-logo.png}  % path to the logo image with background color
   \renewcommand{\translogoPath}{src/ZJUT/trans-logo.png}  % path to the logo image with transparent background
   \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
 }
+
 \ProcessOptions\relax
 
 % --- typeset & elements settings ---
