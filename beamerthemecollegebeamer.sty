@@ -1,4 +1,4 @@
-\ProvidesPackage{collegeBeamer}
+\mode<presentation>
 
 % required packages
 \RequirePackage{etoolbox}
@@ -17,7 +17,7 @@
 \newcommand{\tocStr}{Table of Contents}
 \newcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
 
-\DeclareOption{en}{
+\DeclareOptionBeamer{en}{
     \renewcommand{\tocStr}{Table of Contents}
     \renewcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
 }
@@ -25,7 +25,7 @@
 \newif\ifcollegebeamer@zh
 
 % Chinese option
-\DeclareOption{zh}{%
+\DeclareOptionBeamer{zh}{%
   \collegebeamer@zhtrue
   \AtEndOfPackage{%
     \RequirePackage{ifxetex}
@@ -57,56 +57,56 @@
 \newcommand{\translogoPath}{src/PolyU/trans-logo.png}
 \newcommand{\backgroundPath}{src/PolyU/background.png}
 
-\DeclareOption{polyu}{
+\DeclareOptionBeamer{polyu}{
     \renewcommand{\maincolorRGB}{128, 57, 61}
     \renewcommand{\colorlogoPath}{src/PolyU/color-logo.png}
     \renewcommand{\translogoPath}{src/PolyU/trans-logo.png}
     \renewcommand{\backgroundPath}{src/PolyU/background.png}
 }
 
-\DeclareOption{szu}{
+\DeclareOptionBeamer{szu}{
     \renewcommand{\maincolorRGB}{124, 36, 64}
     \renewcommand{\colorlogoPath}{src/SZU/color-logo.pdf}
     \renewcommand{\translogoPath}{src/SZU/trans-logo.pdf}
     \renewcommand{\backgroundPath}{src/SZU/background.png}
 }
 
-\DeclareOption{swu}{
+\DeclareOptionBeamer{swu}{
     \renewcommand{\maincolorRGB}{39, 32, 99}
     \renewcommand{\colorlogoPath}{src/SWU/color-logo.png}
     \renewcommand{\translogoPath}{src/SWU/trans-logo.png}
     \renewcommand{\backgroundPath}{src/SWU/background.png}
 }
 
-\DeclareOption{heu}{
+\DeclareOptionBeamer{heu}{
     \renewcommand{\maincolorRGB}{2, 77, 162}
     \renewcommand{\colorlogoPath}{src/HEU/color-logo.png}
     \renewcommand{\translogoPath}{src/HEU/trans-logo.png}
     \renewcommand{\backgroundPath}{src/HEU/background.pdf}
 }
 
-\DeclareOption{hit}{
+\DeclareOptionBeamer{hit}{
     \renewcommand{\maincolorRGB}{42, 101, 128}
     \renewcommand{\colorlogoPath}{src/HIT/color-logo.png}
     \renewcommand{\translogoPath}{src/HIT/trans-logo.png}
     \renewcommand{\backgroundPath}{src/HIT/background.png}
 }
 
-\DeclareOption{saes}{
+\DeclareOptionBeamer{saes}{
     \renewcommand{\maincolorRGB}{5, 103, 81}
     \renewcommand{\colorlogoPath}{src/SAES/color-logo.png}
     \renewcommand{\translogoPath}{src/SAES/trans-logo.png}
     \renewcommand{\backgroundPath}{src/SAES/background.png}
 }
 
-\DeclareOption{zafu}{
+\DeclareOptionBeamer{zafu}{
     \renewcommand{\maincolorRGB}{0, 133, 75}
     \renewcommand{\colorlogoPath}{src/ZAFU/color-logo.png}
     \renewcommand{\translogoPath}{src/ZAFU/trans-logo.png}
     \renewcommand{\backgroundPath}{src/ZAFU/background.png}
 }
 
-\DeclareOption{red}{
+\DeclareOptionBeamer{red}{
     \renewcommand{\maincolorRGB}{128, 57, 61}
     \renewcommand{\colorlogoPath}{src/Red/color-logo.png}
     \renewcommand{\translogoPath}{src/Red/trans-logo.png}
@@ -114,35 +114,35 @@
     \renewcommand{\qaStr}{\textbf{全世界无产者，联合起来！}}
 }
 
-\DeclareOption{nwpu}{
+\DeclareOptionBeamer{nwpu}{
 	\renewcommand{\maincolorRGB}{34, 54, 102}
 	\renewcommand{\colorlogoPath}{src/NWPU/color-logo.png}
 	\renewcommand{\translogoPath}{src/NWPU/trans-logo.png}
 	\renewcommand{\backgroundPath}{src/NWPU/background.png}
 }
 
-\DeclareOption{CQU}{
+\DeclareOptionBeamer{CQU}{
   \renewcommand{\maincolorRGB}{2, 82, 159}  % the theme's main color in RGB
   \renewcommand{\colorlogoPath}{src/CQU/color-logo.png}  % path to the logo image with background color
   \renewcommand{\translogoPath}{src/CQU/trans-logo.png}  % path to the logo image with transparent background
   \renewcommand{\backgroundPath}{src/CQU/background.png}  % path to the background image
 }
 
-\DeclareOption{dgut}{
+\DeclareOptionBeamer{dgut}{
     \renewcommand{\maincolorRGB}{6, 120, 63}
     \renewcommand{\colorlogoPath}{src/DGUT/color-logo.png}
     \renewcommand{\translogoPath}{src/DGUT/trans-logo.png}
     \renewcommand{\backgroundPath}{src/DGUT/background.png}
 }
 
-\DeclareOption{zjut}{
+\DeclareOptionBeamer{zjut}{
   \renewcommand{\maincolorRGB}{30, 79, 142}  % the theme's main color in RGB
   \renewcommand{\colorlogoPath}{src/ZJUT/color-logo.png}  % path to the logo image with background color
   \renewcommand{\translogoPath}{src/ZJUT/trans-logo.png}  % path to the logo image with transparent background
   \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
 }
 
-\ProcessOptions\relax
+\ProcessOptionsBeamer
 
 % --- typeset & elements settings ---
 % force 16:9 aspect ratio
@@ -400,3 +400,6 @@
 % coloured texttt
 \newcommand{\ctexttt}[1]{\texttt{\textcolor{maincolor}{#1}}}
 \newcommand{\btexttt}[1]{\texttt{\textcolor{airforceblue}{#1}}}
+
+\mode
+<all>
