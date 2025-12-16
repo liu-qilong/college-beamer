@@ -15,11 +15,11 @@
 % --- package options ---
 % languages
 \newcommand{\tocStr}{Table of Contents}
-\newcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
+\newcommand{\qaStr}{\textsl{Thank you for listening and sleeping! \\ Your feedback will be highly appreciated!}}
 
 \DeclareOption{en}{
     \renewcommand{\tocStr}{Table of Contents}
-    \renewcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
+    \renewcommand{\qaStr}{\textsl{Thank you for listening and sleeping! \\ Your feedback will be highly appreciated!}}
 }
 
 \newif\ifcollegebeamer@zh
@@ -43,7 +43,7 @@
     \fi
 
     \renewcommand{\tocStr}{目录}
-    \renewcommand{\qaStr}{\textbf{感谢您的聆听和反馈}}
+    \renewcommand{\qaStr}{\textbf{感谢各位老师和同学！}}
     \ifxetex
     \else
       \PackageError{collegeBeamer}{请使用 XeLaTeX 编译此模板！}{}
@@ -140,6 +140,13 @@
   \renewcommand{\colorlogoPath}{src/ZJUT/color-logo.png}  % path to the logo image with background color
   \renewcommand{\translogoPath}{src/ZJUT/trans-logo.png}  % path to the logo image with transparent background
   \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
+}
+
+\DeclareOption{bjtu}{
+  \renewcommand{\maincolorRGB}{54, 101, 193}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/BJTU/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/BJTU/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/BJTU/background.png}  % path to the background image
 }
 
 \ProcessOptions\relax
