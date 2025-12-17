@@ -142,6 +142,13 @@
   \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
 }
 
+\DeclareOption{hust}{
+  \renewcommand{\maincolorRGB}{0, 91, 172}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/HUST/color-logo.pdf}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/HUST/trans-logo.pdf}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/HUST/background.pdf}  % path to the background image
+}
+
 \ProcessOptions\relax
 
 % --- typeset & elements settings ---
