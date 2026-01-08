@@ -46,7 +46,7 @@ Hi👋 Here are some beamer templates which are secondary creations of [SINTEF P
 ![ZZU](/gallery/ZZU.png?raw=true)
   > Thank [wzhyhxn](https://github.com/wzhyhxn) for contributing this template!
 - Tianjin Normal University (天津师范大学)
-![TJNU](/gallery/TJNU.png?raw=true)
+![TNU](/gallery/TNU.png?raw=true)
   > Thank [zhangb-dev](https://github.com/zhangb-dev) for contributing this template!
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
