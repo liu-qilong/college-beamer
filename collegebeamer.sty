@@ -26,29 +26,29 @@
 
 % Chinese option
 \DeclareOption{zh}{%
-  \collegebeamer@zhtrue
-  \AtEndOfPackage{%
-    \RequirePackage{ifxetex}
-    \RequirePackage{xeCJK}
-    
-    % os specific font setting
-    \ifwindows
-        \setCJKmainfont{SimSun}
-    \fi
-    \ifmacosx
-        \setCJKmainfont{Songti SC}
-    \fi
-    \iflinux
-        \setCJKmainfont{Noto Serif CJK SC}
-    \fi
+    \collegebeamer@zhtrue
+    \AtEndOfPackage{%
+        \RequirePackage{ifxetex}
+        \RequirePackage{xeCJK}
 
-    \renewcommand{\tocStr}{目录}
-    \renewcommand{\qaStr}{\textbf{感谢您的聆听和反馈}}
-    \ifxetex
-    \else
-      \PackageError{collegeBeamer}{请使用 XeLaTeX 编译此模板！}{}
-    \fi
-  }
+        % os specific font setting
+        \ifwindows
+            \setCJKmainfont{SimSun}
+        \fi
+        \ifmacosx
+            \setCJKmainfont{Songti SC}
+        \fi
+        \iflinux
+            \setCJKmainfont{Noto Serif CJK SC}
+        \fi
+
+        \renewcommand{\tocStr}{目录}
+        \renewcommand{\qaStr}{\textbf{感谢您的聆听和反馈}}
+        \ifxetex
+        \else
+            \PackageError{collegeBeamer}{请使用 XeLaTeX 编译此模板！}{}
+        \fi
+    }
 }
 
 % colleges & institutes
@@ -115,17 +115,17 @@
 }
 
 \DeclareOption{nwpu}{
-	\renewcommand{\maincolorRGB}{34, 54, 102}
-	\renewcommand{\colorlogoPath}{src/NWPU/color-logo.png}
-	\renewcommand{\translogoPath}{src/NWPU/trans-logo.png}
-	\renewcommand{\backgroundPath}{src/NWPU/background.png}
+    \renewcommand{\maincolorRGB}{34, 54, 102}
+    \renewcommand{\colorlogoPath}{src/NWPU/color-logo.png}
+    \renewcommand{\translogoPath}{src/NWPU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/NWPU/background.png}
 }
 
 \DeclareOption{CQU}{
-  \renewcommand{\maincolorRGB}{2, 82, 159}  % the theme's main color in RGB
-  \renewcommand{\colorlogoPath}{src/CQU/color-logo.png}  % path to the logo image with background color
-  \renewcommand{\translogoPath}{src/CQU/trans-logo.png}  % path to the logo image with transparent background
-  \renewcommand{\backgroundPath}{src/CQU/background.png}  % path to the background image
+    \renewcommand{\maincolorRGB}{2, 82, 159}  % the theme's main color in RGB
+    \renewcommand{\colorlogoPath}{src/CQU/color-logo.png}  % path to the logo image with background color
+    \renewcommand{\translogoPath}{src/CQU/trans-logo.png}  % path to the logo image with transparent background
+    \renewcommand{\backgroundPath}{src/CQU/background.png}  % path to the background image
 }
 
 \DeclareOption{dgut}{
@@ -136,10 +136,17 @@
 }
 
 \DeclareOption{zjut}{
-  \renewcommand{\maincolorRGB}{30, 79, 142}  % the theme's main color in RGB
-  \renewcommand{\colorlogoPath}{src/ZJUT/color-logo.png}  % path to the logo image with background color
-  \renewcommand{\translogoPath}{src/ZJUT/trans-logo.png}  % path to the logo image with transparent background
-  \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
+    \renewcommand{\maincolorRGB}{30, 79, 142}  % the theme's main color in RGB
+    \renewcommand{\colorlogoPath}{src/ZJUT/color-logo.png}  % path to the logo image with background color
+    \renewcommand{\translogoPath}{src/ZJUT/trans-logo.png}  % path to the logo image with transparent background
+    \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
+}
+
+\DeclareOption{njau}{
+    \renewcommand{\maincolorRGB}{31, 80, 70}
+    \renewcommand{\colorlogoPath}{src/NJAU/color-logo.png}
+    \renewcommand{\translogoPath}{src/NJAU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/NJAU/background.png}
 }
 
 \DeclareOption{tnu}{
@@ -219,11 +226,11 @@
 \usefonttheme{serif}
 
 \AtEndOfPackage{%
-  \ifcollegebeamer@zh
-    \setbeamerfont{title}{series=\bfseries, size=\Large}
-  \else
-    \setbeamerfont{title}{series=\scshape, size=\Large}
-  \fi
+    \ifcollegebeamer@zh
+        \setbeamerfont{title}{series=\bfseries, size=\Large}
+    \else
+        \setbeamerfont{title}{series=\scshape, size=\Large}
+    \fi
 }
 
 \setbeamerfont{subtitle}{series=\mdseries, size=\normalsize}
@@ -241,7 +248,7 @@
 \newcommand{\@footlinepayoff}{\@SINTEFmotto}
 \setbeamertemplate{footline}{
     \begin{beamercolorbox}[wd=\textwidth, ht=5mm, dp=3mm, rightskip=1cm]{footline}
-    \usebeamerfont{footline}\hfill\@footlinepayoff
+        \usebeamerfont{footline}\hfill\@footlinepayoff
     \end{beamercolorbox}
 }
 
@@ -309,7 +316,7 @@
 
 % presents subtitle on each frame
 \makeatletter
-    \pretocmd\beamer@checkframetitle{\framesubtitle{\thesection \, \secname}}
+\pretocmd\beamer@checkframetitle{\framesubtitle{\thesection \, \secname}}
 \makeatother
 
 % avoid numbering of frames that are breaked into multiply slides
@@ -333,10 +340,10 @@
     \begin{frame}{\,}{\thesection \, \secname}
         \fontfamily{ptm}\selectfont
         \centering\textsl{\textbf{\textcolor{maincolor}{
-            \large Section \thesection.\thesubsection
-            \vskip15pt
-            \LARGE \subsecname
-        }}}
+                    \large Section \thesection.\thesubsection
+                    \vskip15pt
+                    \LARGE \subsecname
+                }}}
     \end{frame}
 }
 
@@ -345,8 +352,8 @@
 \setbeamertemplate{frametitle}{
     \vspace*{-3.5ex}
     \begin{beamercolorbox}[leftskip=2cm]{frametitle}
-    \usebeamerfont{frametitle}\insertframetitle\\
-    \usebeamerfont{framesubtitle}\insertframesubtitle
+        \usebeamerfont{frametitle}\insertframetitle\\
+        \usebeamerfont{framesubtitle}\insertframesubtitle
     \end{beamercolorbox}
 }
 
@@ -363,31 +370,31 @@
 
 \renewcommand{\maketitle}{
     \begingroup
-        \setbeamertemplate{footline}{}
-        \setbeamertemplate{background}{
-          \includegraphics[height=\paperheight]{\backgroundPath}
-        }
-        \begin{frame}
-            \titlepage
-        \end{frame}
+    \setbeamertemplate{footline}{}
+    \setbeamertemplate{background}{
+        \includegraphics[height=\paperheight]{\backgroundPath}
+    }
+    \begin{frame}
+        \titlepage
+    \end{frame}
     \endgroup
 }
 
 % Q&A page
 \newcommand{\QApage}{
     \begingroup
-        \setbeamertemplate{footline}{}
-        \themecolor{colorbg}
-        
-        \begin{frame}{}
+    \setbeamertemplate{footline}{}
+    \themecolor{colorbg}
+
+    \begin{frame}{}
+        \centering
+        \begin{minipage}{\textwidth}
+            \usebeamercolor[fg]{normal text}
             \centering
-            \begin{minipage}{\textwidth}
-                \usebeamercolor[fg]{normal text}
-                \centering
-                \Huge $$\mathcal Q \& \mathcal A$$
-                \Large \qaStr
-            \end{minipage}
-        \end{frame}
+            \Huge $$\mathcal Q \& \mathcal A$$
+            \Large \qaStr
+        \end{minipage}
+    \end{frame}
     \endgroup
 }
 
@@ -401,7 +408,7 @@
         \tiny
         \printbibliography[heading=none]
     \end{frame}
-\endgroup
+    \endgroup
 }
 
 % --- commands ---
