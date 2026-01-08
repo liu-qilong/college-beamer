@@ -17,7 +17,7 @@ Hi👋 Here are some beamer templates which are secondary creations of [SINTEF P
   > Thank [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 - Zhejiang A&F University
 ![ZAFU](/gallery/ZAFU.png?raw=true)
-  > Thank [hywan9](https://github.com/hywan9) for contributing this template!
+  > Thank [ke1ewang](https://github.com/ke1ewang) for contributing this template!
 - Northwestern Polytechnic University
 ![NWPU](/gallery/NWPU.png?raw=true)
   > Thank [chellyzzz](https://github.com/chellyzzz) for contributing this template!
@@ -41,6 +41,7 @@ Some of these templates have been submitted to [Overleaf](https://cs.overleaf.co
 - [深圳大学 SZU Beamer 模板](https://www.overleaf.com/latex/templates/shen-zhen-da-xue-szu-beamer-mo-ban/bjwzmkpsgygf)
 - [深圳环境科学院 SAES Beamer 模版](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
 - [哈尔滨工业大学 Beamer 模版](https://www.overleaf.com/latex/templates/harbin-institute-of-technology-hit-beamer-presentation-theme/prwxqwfdzkqj)
+- [浙江农林大学 ZAFU Beamer 模版](https://www.overleaf.com/latex/templates/zafu-beamer-theme-beta/rcxzphbhnddf)
 
 _P.S. Sadly, Overleaf no longer accepts institute-related templates from non-official accounts._
 
