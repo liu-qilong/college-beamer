@@ -4,35 +4,50 @@ Hi👋 Here are some beamer templates which are secondary creations of [SINTEF P
 
 ## Colleges & institutes
 
-- The Hong Kong Polytechnic University
+- The Hong Kong Polytechnic University (香港理工大学)
 ![PolyU](/gallery/PolyU.png?raw=true)
-- Southwest University
+- Southwest University (西南大学)
 ![SWU](/gallery/SWU.png?raw=true)
-- Shenzhen University
+- Shenzhen University (深圳大学)
 ![SZU](/gallery/SZU.png?raw=true)
-- Shenzhen Academic of Environmental Science
+- Shenzhen Academic of Environmental Science (深圳环境科学院)
 ![SAES](/gallery/SAES.png?raw=true)
-- Harbin Institute of Technology
+- Harbin Institute of Technology (哈尔滨工业大学)
 ![HIT](/gallery/HIT.png?raw=true)
   > Thank [LeeWlving](https://github.com/LeeWlving) for contributing this template!
-- Zhejiang A&F University
+- Zhejiang A&F University (浙江农林大学)
 ![ZAFU](/gallery/ZAFU.png?raw=true)
   > Thank [ke1ewang](https://github.com/ke1ewang) for contributing this template!
-- Northwestern Polytechnic University
+- Northwestern Polytechnic University (西北工业大学)
 ![NWPU](/gallery/NWPU.png?raw=true)
   > Thank [chellyzzz](https://github.com/chellyzzz) for contributing this template!
-- Chongqing University
+- Chongqing University (重庆大学)
 ![CQU](/gallery/CQU.png?raw=true)
   > Thank [ZackH2002](https://github.com/ZackH2002) for contributing this template!
-- Harbin Engineering University
+- Harbin Engineering University (哈尔滨工程大学)
 ![HEU](/gallery/HEU.png?raw=true)
   > Thank [Rui Yann](https://github.com/Shu1L0n9) for contributing this template!
-- Dongguan University of Technology
+- Dongguan University of Technology (东莞理工学院)
 ![DGUT](/gallery/DGUT.png?raw=true)
   > Thank [Penn Lam](https://github.com/Penn-Lam) for contributing this template!
-- Zhejiang University of Technology
+- Zhejiang University of Technology (浙江工业大学)
 ![ZJUT](/gallery/ZJUT.png?raw=true)
   > Thank [Wei Hu](https://github.com/prexhu) for contributing this template!
+- China University of Oceanography (中国海洋大学)
+![OUC](/gallery/OUC.png?raw=true)
+  > Thank [ziao-huang](https://github.com/ziao-huang) for contributing this template!
+- Beijing Jiaotong University (北京交通大学)
+![BJTU](/gallery/BJTU.png?raw=true)
+  > Thank [mochuishle](https://github.com/mochuishle) for contributing this template!
+- Xiamen University (厦门大学)
+![XMU](/gallery/XMU.png?raw=true)
+  > Thank [Marquis03](https://github.com/Marquis03) for contributing this template!
+- Zhenzhou University (郑州大学)
+![ZZU](/gallery/ZZU.png?raw=true)
+  > Thank [wzhyhxn](https://github.com/wzhyhxn) for contributing this template!
+- Tianjin Normal University (天津师范大学)
+![TJNU](/gallery/TJNU.png?raw=true)
+  > Thank [zhangb-dev](https://github.com/zhangb-dev) for contributing this template!
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
