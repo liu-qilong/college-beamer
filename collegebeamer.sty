@@ -177,6 +177,13 @@
   \renewcommand{\backgroundPath}{src/OUC/background.png}  % path to the background image
 }
 
+\DeclareOption{cityu}{
+    \renewcommand{\maincolorRGB}{140, 40, 75}
+    \renewcommand{\colorlogoPath}{src/CityU/color-logo.png}
+    \renewcommand{\translogoPath}{src/CityU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/CityU/background.png}
+}
+
 \ProcessOptions\relax
 
 % --- typeset & elements settings ---
@@ -188,7 +195,13 @@
 \pgfdeclareimage[width=0.09\paperwidth]{translogo}{\translogoPath}
 \newcommand{\@makelogo}{colorlogo}
 
-\setbeamertemplate{headline}{\hspace{0.06\textwidth}\pgfuseimage{\@makelogo}} % put the logo in each slide's top left area
+\newcommand{\spacedHeadline}{
+    \vspace*{0.05\paperheight}
+    \hspace{0.06\paperwidth}
+    \pgfuseimage{\@makelogo}
+}
+% \setbeamertemplate{headline}{\hspace{0.06\textwidth}\pgfuseimage{\@makelogo}} % put the logo in each slide's top left area
+\setbeamertemplate{headline}{\spacedHeadline} 
 
 % color
 \definecolor{maincolor}{RGB}{\maincolorRGB}
