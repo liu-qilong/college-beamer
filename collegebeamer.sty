@@ -10,6 +10,7 @@
 \RequirePackage{verbatim}
 \RequirePackage{animate}
 \RequirePackage{xcolor}
+\RequirePackage{ifplatform}
 
 % --- package options ---
 % languages
@@ -21,18 +22,40 @@
     \renewcommand{\qaStr}{\textsl{Thank you for listening! \\ Your feedback will be highly appreciated!}}
 }
 
-\DeclareOption{zh}{
-    % add to the preamble: \usepackage{xeCJK}
-    % compile with xeLaTeX
+\newif\ifcollegebeamer@zh
+
+% Chinese option
+\DeclareOption{zh}{%
+  \collegebeamer@zhtrue
+  \AtEndOfPackage{%
+    \RequirePackage{ifxetex}
+    \RequirePackage{xeCJK}
+    
+    % os specific font setting
+    \ifwindows
+        \setCJKmainfont{SimSun}
+    \fi
+    \ifmacosx
+        \setCJKmainfont{Songti SC}
+    \fi
+    \iflinux
+        \setCJKmainfont{Noto Serif CJK SC}
+    \fi
+
     \renewcommand{\tocStr}{目录}
     \renewcommand{\qaStr}{\textbf{感谢您的聆听和反馈}}
+    \ifxetex
+    \else
+      \PackageError{collegeBeamer}{请使用 XeLaTeX 编译此模板！}{}
+    \fi
+  }
 }
 
 % colleges & institutes
 \newcommand{\maincolorRGB}{128, 57, 61}
-\newcommand{\colorlogoPath}{src/THU/color-logo.png}
-\newcommand{\translogoPath}{src/THU/trans-logo.png}
-\newcommand{\backgroundPath}{src/THU/background.png}
+\newcommand{\colorlogoPath}{src/PolyU/color-logo.png}
+\newcommand{\translogoPath}{src/PolyU/trans-logo.png}
+\newcommand{\backgroundPath}{src/PolyU/background.png}
 
 \DeclareOption{polyu}{
     \renewcommand{\maincolorRGB}{128, 57, 61}
@@ -43,8 +66,8 @@
 
 \DeclareOption{szu}{
     \renewcommand{\maincolorRGB}{124, 36, 64}
-    \renewcommand{\colorlogoPath}{src/SZU/color-logo.png}
-    \renewcommand{\translogoPath}{src/SZU/trans-logo.png}
+    \renewcommand{\colorlogoPath}{src/SZU/color-logo.pdf}
+    \renewcommand{\translogoPath}{src/SZU/trans-logo.pdf}
     \renewcommand{\backgroundPath}{src/SZU/background.png}
 }
 
@@ -55,11 +78,18 @@
     \renewcommand{\backgroundPath}{src/SWU/background.png}
 }
 
+\DeclareOption{heu}{
+    \renewcommand{\maincolorRGB}{2, 77, 162}
+    \renewcommand{\colorlogoPath}{src/HEU/color-logo.png}
+    \renewcommand{\translogoPath}{src/HEU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/HEU/background.pdf}
+}
+
 \DeclareOption{hit}{
     \renewcommand{\maincolorRGB}{42, 101, 128}
-    \renewcommand{\colorlogoPath}{src/hit/color-logo.png}
-    \renewcommand{\translogoPath}{src/hit/trans-logo.png}
-    \renewcommand{\backgroundPath}{src/hit/background.png}
+    \renewcommand{\colorlogoPath}{src/HIT/color-logo.png}
+    \renewcommand{\translogoPath}{src/HIT/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/HIT/background.png}
 }
 
 \DeclareOption{saes}{
@@ -75,6 +105,69 @@
     \renewcommand{\translogoPath}{src/Red/trans-logo.png}
     \renewcommand{\backgroundPath}{src/Red/background.png}
     \renewcommand{\qaStr}{\textbf{全世界无产者，联合起来！}}
+}
+
+\DeclareOption{nwpu}{
+	\renewcommand{\maincolorRGB}{34, 54, 102}
+	\renewcommand{\colorlogoPath}{src/NWPU/color-logo.png}
+	\renewcommand{\translogoPath}{src/NWPU/trans-logo.png}
+	\renewcommand{\backgroundPath}{src/NWPU/background.png}
+}
+
+\DeclareOption{CQU}{
+  \renewcommand{\maincolorRGB}{2, 82, 159}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/CQU/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/CQU/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/CQU/background.png}  % path to the background image
+}
+
+\DeclareOption{dgut}{
+    \renewcommand{\maincolorRGB}{6, 120, 63}
+    \renewcommand{\colorlogoPath}{src/DGUT/color-logo.png}
+    \renewcommand{\translogoPath}{src/DGUT/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/DGUT/background.png}
+}
+
+\DeclareOption{zjut}{
+  \renewcommand{\maincolorRGB}{30, 79, 142}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/ZJUT/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/ZJUT/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/ZJUT/background.png}  % path to the background image
+}
+
+\DeclareOption{tnu}{
+  \renewcommand{\maincolorRGB}{182, 2, 3}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/TNU/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/TNU/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/TNU/background.png}  % path to the background image
+}
+
+\DeclareOption{zzu}{
+    \renewcommand{\maincolorRGB}{106, 18, 21}
+    \renewcommand{\colorlogoPath}{src/ZZU/color-logo.png}
+    \renewcommand{\translogoPath}{src/ZZU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/ZZU/background.png}
+}    
+
+\DeclareOption{xmu}{
+    \renewcommand{\maincolorRGB}{18, 46, 102}
+    \renewcommand{\colorlogoPath}{src/XMU/color-logo.png}
+    \renewcommand{\translogoPath}{src/XMU/trans-logo.png}
+    \renewcommand{\backgroundPath}{src/XMU/background.png}
+}
+
+\DeclareOption{bjtu}{
+  \renewcommand{\maincolorRGB}{54, 101, 193}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/BJTU/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/BJTU/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/BJTU/background.png}  % path to the background image
+}
+
+\DeclareOption{ouc}{
+  \renewcommand{\maincolorRGB}{1, 64, 153}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/OUC/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/OUC/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/OUC/background.png}  % path to the background image
 }
 
 \DeclareOption{thu}{
@@ -127,7 +220,14 @@
 % \renewcommand{\familydefault}{\sfdefault}  % sans-serif
 \usefonttheme{serif}
 
-\setbeamerfont{title}{series=\bfseries\scshape, size=\Large}
+\AtEndOfPackage{%
+  \ifcollegebeamer@zh
+    \setbeamerfont{title}{series=\bfseries, size=\Large}
+  \else
+    \setbeamerfont{title}{series=\scshape, size=\Large}
+  \fi
+}
+
 \setbeamerfont{subtitle}{series=\mdseries, size=\normalsize}
 \setbeamerfont{author}{size=\normalsize}
 \setbeamerfont{date}{size=\small}
@@ -286,7 +386,7 @@
     \begingroup
         \setbeamertemplate{footline}{}
         \setbeamertemplate{background}{
-            \includegraphics[height=\paperheight]{\backgroundPath}
+          \includegraphics[height=\paperheight]{\backgroundPath}
         }
         \begin{frame}
             \titlepage

@@ -1,29 +1,55 @@
-This is a customized beamer template for THU, based on `college-beamer`. 
-
-- Tsinghua University
-![THU](gallery/THU.png)
-
-
-# `college-beamer`
+# College Beamer
 
 Hi👋 Here are some beamer templates which are secondary creations of [SINTEF Presentation](https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx) template. Thanks [Federico Zenith](federico.zenith@sintef.no) for creating such well-designed works. To use it in my and my friends' schools/institutes, I rewrote and added some icons and features to adapt to specific surroundings✨.
 
 ## Colleges & institutes
 
-- The Hong Kong Polytechnic University
-![PolyU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/PolyU.png?raw=true)
-- Southwest University
-![SWU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SWU.png?raw=true)
-- Shenzhen University
-![SZU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SZU.png?raw=true)
-- Shenzhen Academic of Environmental Science
-![SAES](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SAES.png?raw=true)
-- Harbin Institute of Technology
-![HIT](https://github.com/liu-qilong/college-beamer/blob/main/gallery/HIT.png?raw=true)
+- The Hong Kong Polytechnic University (香港理工大学)
+![PolyU](/gallery/PolyU.png?raw=true)
+- Southwest University (西南大学)
+![SWU](/gallery/SWU.png?raw=true)
+- Shenzhen University (深圳大学)
+![SZU](/gallery/SZU.png?raw=true)
+- Shenzhen Academic of Environmental Science (深圳环境科学院)
+![SAES](/gallery/SAES.png?raw=true)
+- Harbin Institute of Technology (哈尔滨工业大学)
+![HIT](/gallery/HIT.png?raw=true)
   > Thank [LeeWlving](https://github.com/LeeWlving) for contributing this template!
-- Zhejiang A&F University
-![ZAFU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/ZAFU.png?raw=true)
+- Zhejiang A&F University (浙江农林大学)
+![ZAFU](/gallery/ZAFU.png?raw=true)
   > Thank [ke1ewang](https://github.com/ke1ewang) for contributing this template!
+- Northwestern Polytechnic University (西北工业大学)
+![NWPU](/gallery/NWPU.png?raw=true)
+  > Thank [chellyzzz](https://github.com/chellyzzz) for contributing this template!
+- Chongqing University (重庆大学)
+![CQU](/gallery/CQU.png?raw=true)
+  > Thank [ZackH2002](https://github.com/ZackH2002) for contributing this template!
+- Harbin Engineering University (哈尔滨工程大学)
+![HEU](/gallery/HEU.png?raw=true)
+  > Thank [Rui Yann](https://github.com/Shu1L0n9) for contributing this template!
+- Dongguan University of Technology (东莞理工学院)
+![DGUT](/gallery/DGUT.png?raw=true)
+  > Thank [Penn Lam](https://github.com/Penn-Lam) for contributing this template!
+- Zhejiang University of Technology (浙江工业大学)
+![ZJUT](/gallery/ZJUT.png?raw=true)
+  > Thank [Wei Hu](https://github.com/prexhu) for contributing this template!
+- China University of Oceanography (中国海洋大学)
+![OUC](/gallery/OUC.png?raw=true)
+  > Thank [ziao-huang](https://github.com/ziao-huang) for contributing this template!
+- Beijing Jiaotong University (北京交通大学)
+![BJTU](/gallery/BJTU.png?raw=true)
+  > Thank [mochuishle](https://github.com/mochuishle) for contributing this template!
+- Xiamen University (厦门大学)
+![XMU](/gallery/XMU.png?raw=true)
+  > Thank [Marquis03](https://github.com/Marquis03) for contributing this template!
+- Zhenzhou University (郑州大学)
+![ZZU](/gallery/ZZU.png?raw=true)
+  > Thank [wzhyhxn](https://github.com/wzhyhxn) for contributing this template!
+- Tianjin Normal University (天津师范大学)
+![TNU](/gallery/TNU.png?raw=true)
+  > Thank [zhangb-dev](https://github.com/zhangb-dev) for contributing this template!
+- Tsinghua University
+![THU](/gallery/THU.png?raw=true)
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
@@ -33,6 +59,8 @@ Some of these templates have been submitted to [Overleaf](https://cs.overleaf.co
 - [深圳环境科学院 SAES Beamer 模版](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
 - [哈尔滨工业大学 Beamer 模版](https://www.overleaf.com/latex/templates/harbin-institute-of-technology-hit-beamer-presentation-theme/prwxqwfdzkqj)
 - [浙江农林大学 ZAFU Beamer 模版](https://www.overleaf.com/latex/templates/zafu-beamer-theme-beta/rcxzphbhnddf)
+
+_P.S. Sadly, Overleaf no longer accepts institute-related templates from non-official accounts._
 
 ## Options & usage
 
@@ -44,18 +72,26 @@ Switching between different college/institute is quite easy, just add college/in
 \usepackage[polyu,en]{collegeBeamer}
 ```
 
+### Language Selection
+
+To change the language of the slides, simply set the option to en (English) or zh (Chinese).
+All necessary configurations are already handled in the .sty file.
+
+Note:
+If you select zh (Chinese), please use the XeLaTeX compiler for proper font support.
+
 ### Switch language
 
-To switch the language, just change the language option in the `collegeBeamer` package. For example, to switch to the Chinese language, add `zh` to the package:
+To switch the language, just change the language option in the `collegeBeamer` package. For example:
 
 ```
-\usepackage[szu,zh]{collegeBeamer}
+\usepackage[heu,en]{collegeBeamer} % For English
 ```
 
-> When select `zh`, please add the `xeCJK`package to the preamble and use [XeLaTeX](https://www.overleaf.com/learn/latex/XeLaTeX) as the typesetting engine.
+or
 
 ```
-\usepackage{xeCJK}
+\usepackage[heu,zh]{collegeBeamer} % For Chinese (requires XeLaTeX)
 ```
 
 ### Page elements
@@ -63,15 +99,15 @@ To switch the language, just change the language option in the `collegeBeamer` p
 - Table of Contents
 
   At the beginning of each section, the table of contents will be shown with the current chapter highlighted.
-![toc](https://github.com/liu-qilong/college-beamer/blob/main/gallery/table%20of%20contents.png?raw=true)
+![toc](/gallery/table%20of%20contents.png?raw=true)
 - Sub-section page
-![ssec](https://github.com/liu-qilong/college-beamer/blob/main/gallery/subsection.png?raw=true)
+![ssec](/gallery/subsection.png?raw=true)
 - Math equation
-![math](https://github.com/liu-qilong/college-beamer/blob/main/gallery/math.png?raw=true)
+![math](/gallery/math.png?raw=true)
 - Code block
-![code](https://github.com/liu-qilong/college-beamer/blob/main/gallery/code.png?raw=true)
+![code](/gallery/code.png?raw=true)
 - End page
-![end](https://github.com/liu-qilong/college-beamer/blob/main/gallery/end.png?raw=true)
+![end](/gallery/end.png?raw=true)
 
 ## Add your own college?
 
@@ -109,3 +145,8 @@ Now you have your brand new template 👏🎉
 ## Issues & suggestions
 
 If you have any revision suggestions, please create an issue in this repository. Thanks indeed🤝
+
+We also welcome any contributions to this repository. If you have created a new college/institute theme, please consider making a pull request to add it to this repository. Thanks a lot🙏
+
+
+_P.S. Sadly, Overleaf no longer accepts institute-related templates from non-official accounts. Your contributed templates would only be available from this repository._
