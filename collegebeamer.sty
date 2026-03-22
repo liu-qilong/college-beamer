@@ -209,13 +209,7 @@
 \pgfdeclareimage[width=0.09\paperwidth]{translogo}{\translogoPath}
 \newcommand{\@makelogo}{colorlogo}
 
-\newcommand{\spacedHeadline}{
-    \vspace*{0.05\paperheight}
-    \hspace{0.06\paperwidth}
-    \pgfuseimage{\@makelogo}
-}
-% \setbeamertemplate{headline}{\hspace{0.06\textwidth}\pgfuseimage{\@makelogo}} % put the logo in each slide's top left area
-\setbeamertemplate{headline}{\spacedHeadline} 
+\setbeamertemplate{headline}{\hspace{0.06\textwidth}\pgfuseimage{\@makelogo}} % put the logo in each slide's top left area
 
 % color
 \definecolor{maincolor}{RGB}{\maincolorRGB}

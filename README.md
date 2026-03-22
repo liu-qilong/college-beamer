@@ -54,6 +54,9 @@ Hi👋 Here are some beamer templates which are secondary creations of [SINTEF P
 - ShanghaiTech University (上海科技大学)
   ![ShanghaiTech](/gallery/ShanghaiTech.png?raw=true)
   > Thanks to [Hanwei He](https://github.com/nogiveme) for contributing this template!
+- CityUHK (香港城市大学)
+  ![CityUHK](/gallery/CityUHK.png?raw=true)
+  > Thanks to [Li Yanru](https://github.com/UrnayIl) for contributing this template!
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
