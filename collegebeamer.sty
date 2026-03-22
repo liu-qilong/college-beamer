@@ -184,6 +184,20 @@
     \renewcommand{\backgroundPath}{src/CityU/background.png}
 }
 
+\DeclareOption{shanghaitech}{
+  \renewcommand{\maincolorRGB}{139, 0, 0}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/SHTECH/color-logo.png}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/SHTECH/trans-logo.png}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/SHTECH/background.png}  % path to the background image
+}
+
+\DeclareOption{thu}{
+    \renewcommand{\maincolorRGB}{98, 51, 123}
+    \renewcommand{\colorlogoPath}{src/THU/color-logo.png}
+    \renewcommand{\translogoPath}{src/THU/color-logo.png}
+    \renewcommand{\backgroundPath}{src/THU/background.png}
+}
+
 \ProcessOptions\relax
 
 % --- typeset & elements settings ---
@@ -207,6 +221,8 @@
 \definecolor{maincolor}{RGB}{\maincolorRGB}
 \definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
 \definecolor{morelightgray}{rgb}{0.9, 0.9, 0.9}
+\definecolor{darkred}{RGB}{139,0,0}
+\definecolor{darkblue}{RGB}{0,51,102}
 
 \newcommand{\themecolor}[1]{
     \ifstrequal{#1}{colorbg}{
@@ -241,10 +257,10 @@
 
 \setbeamerfont{subtitle}{series=\mdseries, size=\normalsize}
 \setbeamerfont{author}{size=\normalsize}
-\setbeamerfont{date}{size=\normalsize}
+\setbeamerfont{date}{size=\small}
 
 \setbeamerfont{frametitle}{series=\bfseries}
-\setbeamerfont{framesubtitle}{series=\mdseries}
+\setbeamerfont{framesubtitle}{series=\mdseries, size=\small}
 \setbeamerfont{footline}{size=\scriptsize}
 
 % no navigation symbols
@@ -253,8 +269,9 @@
 % footline
 \newcommand{\@footlinepayoff}{\@SINTEFmotto}
 \setbeamertemplate{footline}{
-    \begin{beamercolorbox}[wd=\textwidth, ht=5mm, dp=3mm, rightskip=1cm]{footline}
-    \usebeamerfont{footline}\hfill\@footlinepayoff
+    \begin{beamercolorbox}[wd=\textwidth, ht=5mm, dp=5mm, rightskip=1cm]{footline}
+    \usebeamerfont{footline}
+    \@footlinepayoff \hfill \insertframenumber/\inserttotalframenumber 
     \end{beamercolorbox}
 }
 
@@ -272,10 +289,22 @@
 
 % block
 \setbeamertemplate{blocks}[rounded]
-\setbeamerfont{block title}{series=\centering, size=\small}
+\setbeamerfont{block title}{size=\small}
 \setbeamerfont{block body}{size=\scriptsize}
-\setbeamercolor{block title}{fg=airforceblue, bg=morelightgray}
+\setbeamercolor{block title}{fg=white, bg=maincolor}
 \setbeamercolor{block body}{fg=darkgray, bg=morelightgray}
+
+% alerted block
+\setbeamerfont{block title alerted}{size=\small, series=\bfseries}
+\setbeamerfont{block body alerted}{size=\scriptsize}
+\setbeamercolor{block title alerted}{fg=white, bg=darkred}
+\setbeamercolor{block body alerted}{fg=black, bg=darkred!10}
+
+% example block
+\setbeamerfont{block title example}{size=\small}
+\setbeamerfont{block body example}{size=\scriptsize}
+\setbeamercolor{block title example}{fg=white, bg=darkblue}
+\setbeamercolor{block body example}{fg=black, bg=darkblue!10}
 
 % bullets
 \setbeamertemplate{itemize item}{\textbullet}
@@ -285,6 +314,7 @@
 % table of cotents
 \setbeamertemplate{section in toc}{$\blacktriangleright$~\inserttocsection}  % section name format
 \setbeamertemplate{subsection in toc}{}  % don't present subsection
+\setbeamerfont{section in toc}{size=\large}  % section name font size
 
 % code bolck setting
 \definecolor{codegreen}{RGB}{101,218,120}
@@ -315,6 +345,9 @@
 }
 
 \lstset{style=mystyle}
+
+% theorems
+\setbeamertemplate{theorems}[numbered]
 
 % --- section & frame setting ---
 % subsection
@@ -356,15 +389,17 @@
 % --- page elements ---
 % frame title & subtitle layout
 \setbeamertemplate{frametitle}{
-    \vspace*{-3.5ex}
+    \vspace*{-4.6ex}
     \begin{beamercolorbox}[leftskip=2cm]{frametitle}
     \usebeamerfont{frametitle}\insertframetitle\\
+    \vskip5pt
     \usebeamerfont{framesubtitle}\insertframesubtitle
     \end{beamercolorbox}
 }
 
 % title page
 \setbeamertemplate{title page}{
+    \vspace{1.5cm}
     \hspace{-12mm}  % pull back the box in an inelegant way - but it works!
     \begin{beamercolorbox}[wd=0.9\textwidth, sep=10pt, leftskip=8mm]{title}
         {\usebeamerfont{title}\inserttitle}\\
