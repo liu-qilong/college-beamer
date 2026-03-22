@@ -48,6 +48,8 @@ Hi👋 Here are some beamer templates which are secondary creations of [SINTEF P
 - Tianjin Normal University (天津师范大学)
 ![TNU](/gallery/TNU.png?raw=true)
   > Thank [zhangb-dev](https://github.com/zhangb-dev) for contributing this template!
+- Tsinghua University
+![THU](/gallery/THU.png?raw=true)
 
 Some of these templates have been submitted to [Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
