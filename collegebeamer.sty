@@ -189,7 +189,7 @@
     \renewcommand{\colorlogoPath}{src/ZZU/color-logo.png}
     \renewcommand{\translogoPath}{src/ZZU/trans-logo.png}
     \renewcommand{\backgroundPath}{src/ZZU/background.png}
-}    
+}
 
 \DeclareOption{xmu}{
     \renewcommand{\maincolorRGB}{18, 46, 102}
@@ -268,6 +268,16 @@
     \renewcommand{\backgroundPath}{src/ZUEL/background.png}
 }
 
+% UBC keeps its own layout.
+\newif\ifcollegebeamer@ubc
+\DeclareOption{ubc}{
+    \collegebeamer@ubctrue
+    \renewcommand{\maincolorRGB}{0, 33, 69}
+    \renewcommand{\colorlogoPath}{src/UBC/color-logo.pdf}
+    \renewcommand{\translogoPath}{src/UBC/trans-logo.pdf}
+    \renewcommand{\backgroundPath}{src/UBC/vancouver-campus.jpg}
+}
+
 \ProcessOptions\relax
 
 % --- typeset & elements settings ---
@@ -307,7 +317,11 @@
 
 % font
 % \renewcommand{\familydefault}{\sfdefault}  % sans-serif
-\usefonttheme{serif}
+\ifcollegebeamer@ubc
+    \usefonttheme[onlymath]{serif}
+\else
+    \usefonttheme{serif}
+\fi
 
 \AtEndOfPackage{%
     \ifcollegebeamer@zh
@@ -533,3 +547,12 @@
 % coloured texttt
 \newcommand{\ctexttt}[1]{\texttt{\textcolor{maincolor}{#1}}}
 \newcommand{\btexttt}[1]{\texttt{\textcolor{airforceblue}{#1}}}
+
+% Load after shared templates and language/font hooks have been applied.
+\makeatletter
+\AtEndOfPackage{%
+    \ifcollegebeamer@ubc
+        \input{src/UBC/layout.def}%
+    \fi
+}
+\makeatother
