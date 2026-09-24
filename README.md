@@ -35,6 +35,7 @@ Use the value in the **Option** column when configuring `collegebeamer`. Communi
 | **ZAFU — Zhejiang A&F University**<br>浙江农林大学<br>[Open in Overleaf](https://www.overleaf.com/latex/templates/zafu-beamer-theme-beta/rcxzphbhnddf) | `zafu` | [ke1ewang](https://github.com/ke1ewang) | <img src="/gallery/ZAFU.png?raw=true" alt="ZAFU template preview" width="500"> |
 | **DGUT — Dongguan University of Technology**<br>东莞理工学院 | `dgut` | [Penn Lam](https://github.com/Penn-Lam) | <img src="/gallery/DGUT.png?raw=true" alt="DGUT template preview" width="500"> |
 | **SAES — Shenzhen Academy of Environmental Sciences**<br>深圳环境科学院<br>[Open in Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt) | `saes` | [liu-qilong](https://github.com/liu-qilong) | <img src="/gallery/SAES.png?raw=true" alt="SAES template preview" width="500"> |
+| **UBC — The University of British Columbia**<br>不列颠哥伦比亚大学 | `ubc` | [amaodemao](https://github.com/Amaodemao) | <img src="/gallery/UBC.png?raw=true" alt="UBC template preview" width="500"> |
 
 Some early themes are also available on Overleaf through the links above. Overleaf no longer accepts institution-specific templates from unofficial accounts, so newer community themes are distributed through this repository.
 

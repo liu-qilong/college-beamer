@@ -1,0 +1,416 @@
+% UBC variation by Haonan Bai (2026), based on the CUHK adaptation by Rui HU.
+% Earlier template for Sapienza presentations with LaTeX beamer.
+%
+% Adapted by Andrea Gasparini, andrea@gasparini.cloud for
+% Sapienza presentations.
+%
+% Original template by Federico Zenith, federico.zenith@sintef.no.
+% Derived (through several iterations) from Håvard Berland's
+% beamerthementnu class.
+%
+%
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+% College Beamer integration by Haonan Bai (2026).
+% SPDX-License-Identifier: GPL-3.0-or-later
+% See LICENSE-GPL-3.0.txt and SOURCES.md in this directory.
+\ProvidesFile{src/UBC/layout.def}[2026/09/24 UBC layout for College Beamer]
+\makeatletter
+
+% Shared dependencies are loaded by collegebeamer.
+
+% Force 16:9 aspect ratio
+\geometry{paperwidth=20cm,paperheight=11.25cm}
+
+% Caladea is a Cambria clone, Carlito a Calibri clone
+\RequirePackage{caladea,carlito}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Official UBC screen palette: https://brand.ubc.ca/guidelines/downloads/ubc-colour-and-fonts/
+\definecolor{ubcblue}{HTML}{002145}
+\definecolor{ubcsecondary}{HTML}{0055B7}
+\definecolor{ubcsky}{HTML}{00A7E1}
+\definecolor{ubclightblue}{HTML}{97D4E9}
+
+% Neutral surfaces and semantic alert colour are template choices.
+\definecolor{ubctext}{HTML}{303840}
+\definecolor{ubcgrey}{HTML}{F1F3F5}
+\definecolor{ubcmuted}{HTML}{58636E}
+\definecolor{ubcalert}{HTML}{B33A3A}
+\colorlet{maincolor}{ubcblue}
+
+% Retain old colour names for documents using the original public commands.
+\colorlet{sintefgrey}{ubcgrey}
+\colorlet{sintefgray}{ubcgrey}
+\colorlet{sinteflightgrey}{ubcgrey}
+\colorlet{sinteflightgray}{ubcgrey}
+\colorlet{sinteflightgreen}{ubclightblue}
+\colorlet{sintefgreen}{ubcsecondary}
+\colorlet{sintefdarkgreen}{ubcblue}
+\colorlet{sintefyellow}{ubcsecondary}
+\colorlet{sintefred}{ubcalert}
+\colorlet{sinteflilla}{ubcblue}
+\colorlet{sintefcyan}{ubcsky}
+\colorlet{sintefmagenta}{ubcalert}
+\setbeamersize{text margin left=10mm,text margin right=10mm}
+
+% No navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+\newcommand{\@footlineauthor}{\insertauthor \enspace$\vert$\enspace}
+\renewcommand{\@footlinepayoff}{\@footlineauthor\inserttitle}
+\newcommand{\footlinepayoff}[1]{\renewcommand{\@footlinepayoff}{#1}}
+% Define footline content
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=4mm,dp=3mm,rightskip=1cm,leftskip=1cm]{footline}
+  \usebeamerfont{footline}
+  \insertframenumber/\inserttotalframenumber
+  \ifstrempty{\@footlinepayoff}{}{%
+    \usebeamerfont{footline}\hfill\@footlinepayoff
+  }
+  \end{beamercolorbox}
+}
+
+% Set footline AND coordinate blocks with it
+\renewcommand{\footlinecolor}[1]{% if #1 is empty, makes footline transparent
+  \ifstrempty{#1}{%
+    \footlinepayoff{}
+    \setbeamercolor{footline}{fg=ubcmuted, bg=}
+    \setbeamercolor{block title}{fg=white,bg=maincolor}
+    \setbeamercolor{block body}{fg=ubctext,bg=ubcgrey}
+  }{
+    \footlinepayoff{\@footlineauthor\inserttitle}
+    \setbeamercolor{footline}{fg=white,bg=#1}
+    \setbeamercolor{block title}{fg=white,bg=#1}
+    \setbeamercolor{block body}{fg=ubctext,bg=ubcgrey}
+  }%
+}
+\footlinecolor{} % Default: no footline
+
+% Official PDFs retain their built-in clear space.
+\pgfdeclareimage[height=15mm]{logo}{\colorlogoPath}
+\pgfdeclareimage[height=15mm]{whitelogo}{\translogoPath}
+\newcommand{\@logo}{logo}
+
+% Set colours
+% NOTE! Beamer colors should be set in the preamble. It often works fine in the
+%       document itself, but NOT for normal text foreground.
+%       \themecolor should only be called from the preamble.
+\renewcommand{\themecolor}[1]{
+	\ifboolexpr{test {\ifstrequal{#1}{main}} or test {\ifstrequal{#1}{colorbg}}}{%
+        \setbeamercolor{footline}{fg=white}
+		\setbeamercolor{normal text}{fg=white,bg=maincolor}
+		\setbeamercolor{structure}{fg=white}
+		\renewcommand{\@logo}{whitelogo}
+		\setbeamercolor{block title}{fg=maincolor,bg=sintefgrey}
+		\setbeamercolor{block body}{fg=ubctext,bg=ubcgrey}
+	}{%
+        \setbeamercolor{footline}{fg=ubcmuted}
+		\setbeamercolor{normal text}{fg=ubctext,bg=white}
+		\setbeamercolor{structure}{fg=maincolor}
+		\renewcommand{\@logo}{logo}
+		\setbeamercolor{block title}{fg=white,bg=maincolor}
+		\setbeamercolor{block body}{fg=ubctext,bg=ubcgrey}
+	}
+}
+\themecolor{white} % Default: white theme
+
+\setbeamercolor{title}{fg=maincolor,bg=white}
+\setbeamercolor{alerted text}{fg=ubcalert}
+\setbeamercolor{author}{fg=black}
+\setbeamercolor{date}{fg=black}
+
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{subtitle}{series=\mdseries,size=\small}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{framesubtitle}{series=\mdseries,size=\footnotesize}
+\setbeamerfont{footline}{size=\scriptsize}
+\setbeamerfont{block title}{series=\centering\bfseries,size=\large}
+\setbeamerfont{block body}{size={}}
+\setbeamerfont{section in toc}{size={}}
+
+\setbeamertemplate{blocks}[default]
+
+% Bullets in several levels
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{\textemdash}
+\setbeamertemplate{itemize subsubitem}{\ensuremath{\circ}}
+
+\newenvironment{colorblock}[3][white]{%
+	\begingroup
+	\setbeamercolor{block title}{fg=#1,bg=#2}
+	\setbeamercolor{block body} {fg=#1,bg=#2}
+	\begin{block}{#3}
+	}{%
+	\end{block}
+	\endgroup
+}
+
+% Reserve the upper-right area for the crest independently of title length.
+\setbeamertemplate{headline}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,inner sep=0pt] at
+      ([xshift=-8mm,yshift=-3mm]current page.north east)
+      {\pgfuseimage{\@logo}};
+  \end{tikzpicture}%
+  \vskip3mm
+}
+
+% Define frame title and subtitle layout
+\setbeamertemplate{frametitle}{%
+  \begin{beamercolorbox}[wd=0.88\textwidth,sep=0pt]{frametitle}%
+    \vskip2mm
+    {\usebeamerfont{frametitle}\strut\insertframetitle\par}
+    {\usebeamerfont{framesubtitle}\strut\insertframesubtitle\par}
+    \vskip3mm
+  \end{beamercolorbox}
+}
+
+\ifcollegebeamer@zh
+    % Reuse the language option's selected CJK family in sans-serif slides.
+    \renewcommand{\CJKsfdefault}{\CJKrmdefault}
+    \def\ubc@supervisorlabel{导师}
+    \renewcommand{\strsubsec}{第 \thesection.\thesubsection 节}
+    \renewcommand{\qaStr}{感谢您的聆听！\par 欢迎提问。}
+\else
+    \def\ubc@supervisorlabel{Supervisor}
+    \renewcommand{\qaStr}{Thank you for listening!\par Any questions?}
+\fi
+
+\renewcommand{\bhref}[2]{\textcolor{ubcsecondary}{\href{#1}{#2}}}
+\newcommand{\hrefcol}[2]{\bhref{#1}{#2}}
+
+\def\@courseLabel{}
+\def\@IDnumber{}
+\def\@supervisor{}
+
+\newcommand{\course}[1]{\def\@courseLabel{#1}}
+\newcommand{\IDnumber}[1]{\def\@IDnumber{#1}}
+\newcommand{\supervisor}[1]{\def\@supervisor{#1}}
+
+% Define the title page
+\setbeamertemplate{title page}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,inner sep=0pt] at
+      ([xshift=6mm,yshift=-4mm]current page.north west)
+      {\includegraphics[width=0.53\paperwidth]{src/UBC/signature-white.pdf}};
+    \node[anchor=south west,inner sep=0pt] at
+      ([xshift=10mm,yshift=16mm]current page.south west) {%
+      \begin{minipage}{\ifdefempty{\@TitleBackground}{0.86\paperwidth}{0.48\paperwidth}}
+        \raggedright\color{white}
+        {\usebeamerfont{title}\inserttitle\par}
+        \ifdefempty{\insertsubtitle}{}{\usebeamerfont{subtitle}\insertsubtitle\par}
+        \ifdefempty{\@courseLabel}{}{\usebeamerfont{subtitle}\@courseLabel\par}
+        \vspace{1mm}
+        {\usebeamerfont{author}\textbf{\insertauthor}\ifdefempty{\@IDnumber}{}{ (\@IDnumber)}\par}
+        \ifdefempty{\insertinstitute}{}{\usebeamerfont{author}\insertinstitute\par}
+        \ifdefempty{\@supervisor}{}{\usebeamerfont{author}\ubc@supervisorlabel: \textbf{\@supervisor}\par}
+        {\usebeamerfont{date}\insertdate\par}
+      \end{minipage}%
+    };
+    \fill[ubcsky] (current page.south west) rectangle
+      ([yshift=2mm]current page.south east);
+  \end{tikzpicture}%
+}
+
+% Fill a target rectangle without stretching; each caller supplies its clip.
+\newsavebox{\ubc@imagebox}
+\newcommand{\ubc@coverimage}[3]{%
+  \sbox{\ubc@imagebox}{\includegraphics[width=#2]{#1}}%
+  \ifdim\dimexpr\ht\ubc@imagebox+\dp\ubc@imagebox\relax<#3\relax
+    \includegraphics[height=#3]{#1}%
+  \else
+    \usebox{\ubc@imagebox}%
+  \fi
+}
+
+% Define slide splitting dimensions (e.g. title and chapter slides)
+\newcommand{\TikzSplitSlide}[1]{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \clip ([xshift=0.58\paperwidth]current page.south west) --
+          (current page.south east) -- (current page.north east) --
+          ([xshift=0.66\paperwidth]current page.north west) -- cycle;
+    \node[inner sep=0pt] at ([xshift=0.3\paperwidth]current page.center) {%
+      \ubc@coverimage{#1}{0.5\paperwidth}{\paperheight}%
+    };
+  \end{tikzpicture}
+}
+
+\newbool{splittitle}
+\newcommand{\@TitleBackground}{}
+\newcommand{\titlebackground}{\@ifstar{\SplitBackground}{\FullBackground}}
+\newcommand{\FullBackground}[1]{%
+    \boolfalse{splittitle}%
+    \renewcommand{\@TitleBackground}{#1}%
+}
+\newcommand{\SplitBackground}[1]{%
+	\booltrue{splittitle}%
+	\renewcommand{\@TitleBackground}{#1}%
+}
+
+% Overwrite the maketitle command for the title page
+\renewcommand{\maketitle}{
+\begingroup
+  \setbeamercolor{normal text}{fg=white,bg=ubcblue}
+  \setbeamercolor{footline}{fg=white,bg=}
+  \setbeamertemplate{footline}{}
+  \setbeamertemplate{headline}{}
+  \ifdefempty{\@TitleBackground}{}{% Skip if \@TitleBackground is empty
+    \setbeamertemplate{background}{%
+      \ifbool{splittitle}{%
+        \TikzSplitSlide{\@TitleBackground}
+      }{% Normal, full-screen background
+        \begin{tikzpicture}[remember picture,overlay]
+          \clip (current page.south west) rectangle (current page.north east);
+          \node[inner sep=0pt] at (current page.center)
+            {\ubc@coverimage{\@TitleBackground}{\paperwidth}{\paperheight}};
+          \fill[ubcblue,opacity=0.88] (current page.south west) rectangle
+            ([xshift=0.57\paperwidth]current page.north west);
+        \end{tikzpicture}
+      }
+    }
+  }
+  \begin{frame}%
+  \titlepage%
+  \end{frame}%
+\endgroup
+}
+
+    \newenvironment{withoutheadline}{
+        \setbeamertemplate{headline}[default]
+        \def\beamer@entrycode{\vspace*{-\headheight}}
+    }{}
+
+% Define chapter environment
+\newenvironment{chapter}[3][]{% Args: image (optional), color, frame title
+  \begingroup
+  \themecolor{main}
+  \setbeamertemplate{footline}{}
+  \setbeamertemplate{headline}{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north west,inner sep=0pt] at
+        ([xshift=5mm,yshift=-2mm]current page.north west)
+        {\pgfuseimage{\@logo}};
+    \end{tikzpicture}%
+    \vskip3mm
+  }
+  \ifstrempty{#2}{
+    \setbeamercolor{frametitle}{fg=white}
+    \setbeamercolor{normal text}{fg=white,bg=maincolor}
+  }{
+    \setbeamercolor{frametitle}{fg=white}
+    \setbeamercolor{normal text}{fg=white,bg=#2}
+  }
+  \ifstrempty{#1}{}{\setbeamertemplate{background}{\TikzSplitSlide{#1}}}
+  \setbeamertemplate{frametitle}{%
+    \vspace*{6ex}
+    \begin{beamercolorbox}[wd=0.45\textwidth]{frametitle}
+      \usebeamerfont{frametitle}\insertframetitle\\
+      \usebeamerfont{framesubtitle}\insertframesubtitle
+    \end{beamercolorbox}
+  }
+  \begin{frame}{#3}
+  \minipage{0.35\textwidth}%
+  \usebeamercolor[fg]{normal text}%
+}{%
+  \endminipage
+  \end{frame}
+  \endgroup
+}
+
+% Define sidepic environment
+\newenvironment{sidepic}[2]{% Args: image, frame title
+  \begingroup
+  \setbeamertemplate{background}{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \clip ([xshift=0.62\paperwidth]current page.south west) rectangle
+        (current page.north east);
+      \node[inner sep=0pt] at ([xshift=0.31\paperwidth]current page.center)
+        {\ubc@coverimage{#1}{0.38\paperwidth}{\paperheight}};
+    \end{tikzpicture}%
+  }
+  \setbeamertemplate{headline}{\vskip3mm}
+  \setbeamertemplate{frametitle}{% Same as normal, but with right skip
+    \begin{beamercolorbox}[wd=0.60\textwidth,sep=0pt]{frametitle}%
+      \vskip2mm
+      {\usebeamerfont{frametitle}\strut\insertframetitle\par}
+      {\usebeamerfont{framesubtitle}\strut\insertframesubtitle\par}
+      \vskip3mm
+    \end{beamercolorbox}
+  }
+  \begin{frame}{#2}
+  \minipage{0.6\textwidth}%
+}{%
+  \endminipage
+  \end{frame}
+  \endgroup
+}
+
+% Closing slide: keep the original UBC appearance through both interfaces.
+\newcommand{\backmatter}[1][]{%
+  \begingroup
+    \themecolor{colorbg}
+    \begin{frame}[plain]
+      \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=north east,inner sep=0pt] at
+          ([xshift=-8mm,yshift=-3mm]current page.north east)
+          {\pgfuseimage{\@logo}};
+        \node[inner sep=0pt] at (current page.center) {%
+          \begin{minipage}{0.86\paperwidth}
+            \usebeamercolor[fg]{normal text}\centering
+            \ifstrequal{#1}{notitle}{}{{\Huge\inserttitle\par}\vspace{5mm}}
+            {\Large\itshape\qaStr\par}
+          \end{minipage}%
+        };
+      \end{tikzpicture}%
+    \end{frame}
+  \endgroup
+}
+\renewcommand{\QApage}{\backmatter}
+
+% Define sectioning and table of contents
+\AtBeginSection[]
+{
+    \begingroup
+    \themecolor{main}
+    \setbeamertemplate{footline}{}
+    \begin{frame}{\tocStr}
+        \tableofcontents[currentsection]
+    \end{frame}
+    \endgroup
+}
+
+% style of section presented in the table of contents
+\setbeamertemplate{section in toc}{$\blacktriangleright$~\inserttocsection}
+\setbeamertemplate{section in toc shaded}[default][60]
+
+% Keep College Beamer's subsection divider with the UBC font and placement.
+\AtBeginSubsection[]{%
+    \begingroup
+    \setbeamertemplate{footline}{}
+    \begin{frame}{\,}
+        \centering
+        \usebeamercolor[fg]{structure}%
+        {\large\strsubsec\par}
+        \vspace{15pt}
+        {\LARGE\bfseries\subsecname\par}
+    \end{frame}
+    \endgroup
+}
+
+% Frame subtitles and continuation handling remain owned by collegebeamer.
+\makeatother
+\endinput
