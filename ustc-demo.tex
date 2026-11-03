@@ -1,0 +1,137 @@
+\documentclass[aspectratio=169]{beamer}
+% zh：中文演示（需要 XeLaTeX）；英文演示可改为 [ustc,en]。
+\usepackage[ustc,zh]{collegebeamer}
+
+% 修改以下信息即可开始制作自己的报告。
+\title{中国科学技术大学 Beamer 模板}
+\subtitle{以强化学习为例的排版示范}
+\author{报告人姓名}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% 第一部分：常见的标题、列表、强调与逐项显示。
+\section{开始使用}
+
+\begin{frame}{如何使用这个模板}
+  \begin{itemize}
+    \item 修改导言区的 \texttt{\textbackslash title}、\texttt{\textbackslash author} 等信息。
+    \item 每张幻灯片使用一个 \texttt{frame} 环境；\texttt{section} 自动插入章节目录页。
+    \item 正文尽量只保留观点和支撑材料，详细解释留给口头报告。
+  \end{itemize}
+  \vspace{0.4cm}
+  本例展示 \ctextbf{强调文字}、公式、双栏、图片、代码和结束页。
+\end{frame}
+
+\begin{frame}{列表与逐项显示}
+  \begin{itemize}[<+->]
+    \item 先提出问题：智能体如何根据反馈选择动作？
+    \item 再给出方法：用价值函数评价候选动作。
+    \begin{itemize}
+      \item 子列表可用于补充一个关键条件。
+    \end{itemize}
+    \item 最后说明限制：示例不代表实际实验结果。
+  \end{itemize}
+  \vspace{0.3cm}
+  \alert{提示：}逐项显示会使同一页生成多个 PDF 页面。
+\end{frame}
+
+\section{内容排版}
+
+\begin{frame}{公式与符号}
+  \begin{block}{贝尔曼最优方程（示意）}
+    \[
+      V^*(s)=\max_a\left[r(s,a)+\gamma\sum_{s'}P(s'\mid s,a)V^*(s')\right].
+    \]
+  \end{block}
+  \begin{itemize}
+    \item $s$ 是状态，$a$ 是动作，$\gamma\in[0,1)$ 是折扣因子。
+    \item 数学公式直接使用 Beamer 自带的 \texttt{amsmath} 支持。
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{双栏布局}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{左栏：方法}
+        \begin{enumerate}
+          \item 收集状态与奖励；
+          \item 更新价值估计；
+          \item 比较可选动作。
+        \end{enumerate}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{右栏：展示}
+        这里可以替换为模型结构图、实验曲线，或对方法的简短解释。
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.4cm}
+  双栏适合并排比较，但不宜把两栏都写满。
+\end{frame}
+
+\begin{frame}{图片与说明}
+  \begin{columns}[c]
+    \begin{column}{0.53\textwidth}
+      \includegraphics[width=\textwidth]{src/USTC/background.png}
+      \par\scriptsize 图片示例：模板自带的封面素材
+    \end{column}
+    \begin{column}{0.40\textwidth}
+      \begin{itemize}
+        \item 用 \texttt{\textbackslash includegraphics} 插入图片。
+        \item 可以设置 \texttt{width=\textbackslash textwidth} 自适应栏宽。
+        \item 替换为自己的图片时，记得保留来源说明。
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{区块、提示和颜色}
+  \begin{block}{普通区块}
+    用于介绍定义、方法步骤或阶段结论。
+  \end{block}
+  \begin{exampleblock}{示例区块}
+    例如：奖励函数可以把任务目标转化为数值反馈。
+  \end{exampleblock}
+  \begin{alertblock}{警示区块}
+    不要把示例文字当成真实的实验结论。
+  \end{alertblock}
+\end{frame}
+
+\section{进阶元素}
+
+\begin{frame}[fragile]{代码展示}
+  % 含有 lstlisting 或 verb 的页面必须添加 [fragile]。
+  \begin{lstlisting}[language=Python]
+def bellman_update(reward, next_value, gamma):
+    """One-step value backup (illustrative only)."""
+    return reward + gamma * next_value
+  \end{lstlisting}
+  \vspace{0.3cm}
+  插入代码时，页面需要写成 \verb|\begin{frame}[fragile]{...}|。
+\end{frame}
+
+\begin{frame}{链接与资料}
+  \begin{itemize}
+    \item \bhref{https://ctan.org/pkg/beamer}{Beamer 文档}：更多页面与动画选项。
+    \item \bhref{https://www.overleaf.com/learn/latex/Beamer}{Overleaf Beamer 教程}：常用布局的入门示例。
+    \item 在自己的报告中添加真实的参考资料与图片来源。
+  \end{itemize}
+\end{frame}
+
+\section{总结}
+
+\begin{frame}{制作自己的报告}
+  \begin{enumerate}
+    \item 用研究问题替换示例标题与章节；
+    \item 每页只放一个主要观点及必要证据；
+    \item 编译 PDF 并检查字体、对比度和页面溢出。
+  \end{enumerate}
+  \vspace{0.5cm}
+  配色与图片路径由 \texttt{collegebeamer.sty} 中的 \texttt{ustc} 选项控制。
+\end{frame}
+
+\QApage
+\end{document}

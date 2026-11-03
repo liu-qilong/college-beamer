@@ -10,6 +10,7 @@ Use the value in the **Option** column when configuring `collegebeamer`. Communi
 
 | College or institute | Option | Contributor | Preview |
 |:---|:---:|:---:|:---:|
+| **USTC — University of Science and Technology of China**<br>中国科学技术大学 | `ustc` | [Pre-cici](https://github.com/Pre-cici) | <img src="/gallery/USTC.png?raw=true" alt="USTC template preview" width="500"> |
 | **PolyU — The Hong Kong Polytechnic University**<br>香港理工大学<br>[Open in Overleaf](https://www.overleaf.com/latex/templates/the-honk-kong-polytechnic-university-polyu-beamer-presentation-theme/vywngqprjwrq) | `polyu` | [liu-qilong](https://github.com/liu-qilong) | <img src="/gallery/PolyU.png?raw=true" alt="PolyU template preview" width="500"> |
 | **THU — Tsinghua University**<br>清华大学 | `thu` | [Ziyi Chen](https://github.com/chenziyiTHU) | <img src="/gallery/THU.png?raw=true" alt="THU template preview" width="500"> |
 | **CityUHK — City University of Hong Kong**<br>香港城市大学 | `cityu` | [Li Yanru](https://github.com/UrnayIl) | <img src="/gallery/CityUHK.png?raw=true" alt="CityUHK template preview" width="500"> |
@@ -55,6 +56,8 @@ XeLaTeX works with both supported languages and is required for Chinese. English
 ```bash
 latexmk -pdf -interaction=nonstopmode pre.tex
 ```
+
+To try the USTC theme in Chinese, run `latexmk -xelatex -interaction=nonstopmode -halt-on-error ustc-demo.tex` from the repository root. The example uses `\usepackage[ustc,zh]{collegebeamer}`; use `ustc,en` for English. The USTC logos and title artwork are in `src/USTC/`.
 
 ### Select an institution and language
 
