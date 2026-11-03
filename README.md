@@ -10,7 +10,6 @@ Use the value in the **Option** column when configuring `collegebeamer`. Communi
 
 | College or institute | Option | Contributor | Preview |
 |:---|:---:|:---:|:---:|
-| **USTC — University of Science and Technology of China**<br>中国科学技术大学 | `ustc` | [Pre-cici](https://github.com/Pre-cici) | <img src="/gallery/USTC.png?raw=true" alt="USTC template preview" width="500"> |
 | **PolyU — The Hong Kong Polytechnic University**<br>香港理工大学<br>[Open in Overleaf](https://www.overleaf.com/latex/templates/the-honk-kong-polytechnic-university-polyu-beamer-presentation-theme/vywngqprjwrq) | `polyu` | [liu-qilong](https://github.com/liu-qilong) | <img src="/gallery/PolyU.png?raw=true" alt="PolyU template preview" width="500"> |
 | **THU — Tsinghua University**<br>清华大学 | `thu` | [Ziyi Chen](https://github.com/chenziyiTHU) | <img src="/gallery/THU.png?raw=true" alt="THU template preview" width="500"> |
 | **CityUHK — City University of Hong Kong**<br>香港城市大学 | `cityu` | [Li Yanru](https://github.com/UrnayIl) | <img src="/gallery/CityUHK.png?raw=true" alt="CityUHK template preview" width="500"> |
@@ -36,6 +35,7 @@ Use the value in the **Option** column when configuring `collegebeamer`. Communi
 | **ZAFU — Zhejiang A&F University**<br>浙江农林大学<br>[Open in Overleaf](https://www.overleaf.com/latex/templates/zafu-beamer-theme-beta/rcxzphbhnddf) | `zafu` | [ke1ewang](https://github.com/ke1ewang) | <img src="/gallery/ZAFU.png?raw=true" alt="ZAFU template preview" width="500"> |
 | **DGUT — Dongguan University of Technology**<br>东莞理工学院 | `dgut` | [Penn Lam](https://github.com/Penn-Lam) | <img src="/gallery/DGUT.png?raw=true" alt="DGUT template preview" width="500"> |
 | **SAES — Shenzhen Academy of Environmental Sciences**<br>深圳环境科学院<br>[Open in Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt) | `saes` | [liu-qilong](https://github.com/liu-qilong) | <img src="/gallery/SAES.png?raw=true" alt="SAES template preview" width="500"> |
+| **USTC — University of Science and Technology of China**<br>中国科学技术大学 | `ustc` | [Pre-cici](https://github.com/Pre-cici) | <img src="/gallery/USTC.png?raw=true" alt="USTC template preview" width="500"> |
 
 Some early themes are also available on Overleaf through the links above. Overleaf no longer accepts institution-specific templates from unofficial accounts, so newer community themes are distributed through this repository.
 
@@ -56,8 +56,6 @@ XeLaTeX works with both supported languages and is required for Chinese. English
 ```bash
 latexmk -pdf -interaction=nonstopmode pre.tex
 ```
-
-To try the USTC theme in Chinese, run `latexmk -xelatex -interaction=nonstopmode -halt-on-error ustc-demo.tex` from the repository root. The example uses `\usepackage[ustc,zh]{collegebeamer}`; use `ustc,en` for English. The USTC logos and title artwork are in `src/USTC/`.
 
 ### Select an institution and language
 
